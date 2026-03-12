@@ -16,6 +16,57 @@ button{background:#ff0055;border:none;color:white;padding:12px 18px;border-radiu
 button:hover{background:#ff3377}
 canvas{max-width:100%;border-radius:8px;margin-top:15px;border:1px solid #ccc;touch-action:none}
 footer{background:#111827;color:#ddd;text-align:center;padding:20px;font-size:14px}
+
+.footer{
+background:#0f172a;
+color:#ddd;
+padding:50px 20px 20px;
+margin-top:60px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.footer-col h3{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col h4{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-col a{
+display:block;
+color:#bbb;
+margin:6px 0;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col a:hover{
+color:#ff0055;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid #333;
+padding-top:20px;
+font-size:14px;
+}
+    
 </style>
 </head>
 <body>
@@ -104,7 +155,40 @@ You can also use our other tools like
 
 </div>
 
-<footer>© SharpToolKit – Free Mobile Image Tools</footer>
+<footer class="footer">
+
+<div class="footer-container">
+
+
+<div class="footer-col">
+<h4>Tools</h4>
+<a href="compress.html">Image Compressor</a>
+<a href="resize.html">Image Resizer</a>
+<a href="crop.html">Crop Image</a>
+<a href="jpg-to-png.html">JPG to PNG</a>
+<a href="png-to-jpg.html">PNG to JPG</a>
+</div>
+
+<div class="footer-col">
+<h4>Website</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SharpToolKit. All rights reserved.
+</div>
+
+</footer>
 
 <script>
 const canvas = document.getElementById("canvas");
@@ -265,4 +349,5 @@ document.getElementById("cropBtn").addEventListener("click", function(){
 </script>
 
 </body>
+
 </html>
