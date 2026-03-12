@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Resize Image Online Free | SharpToolKit</title>
+
+<meta name="description" content="Resize images online for free. Change photo width and height instantly using our mobile-friendly image resizer. No download required.">
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#ff0055,#ff7a95);
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+justify-content:space-around;
+background:white;
+padding:12px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:16px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+input{
+padding:10px;
+margin:6px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#ff0055;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3377;
+}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:8px;
+}
+
+footer{
+background:#111827;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>SharpToolKit</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Resize Image Online</h1>
+
+<p>
+SharpToolKit allows you to resize images online quickly and easily. 
+You can change the width and height of your photos directly in your browser without installing any apps. 
+This tool is optimized for mobile users so you can resize images on your phone in seconds.
+</p>
+
+<p>
+Resizing images is useful when uploading photos to websites, social media platforms, or documents that require specific image sizes. 
+Large images can slow down websites and take longer to upload. 
+By resizing your image, you can make the file more efficient while still keeping good visual quality.
+</p>
+
+<input type="file" id="imageInput" accept="image/*">
+
+<br><br>
+
+<label>Width (px)</label>
+<input type="number" id="widthInput" placeholder="e.g. 800">
+
+<label>Height (px)</label>
+<input type="number" id="heightInput" placeholder="e.g. 600">
+
+<br><br>
+
+<button onclick="resizeImage()">Resize Image</button>
+
+<br><br>
+
+<img id="preview">
+
+<br><br>
+
+<a id="downloadLink" download="resized-image.jpg">
+<button id="downloadBtn" style="display:none;">Download Resized Image</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<!-- Monetag ads -->
+<script>
+/* paste monetag script here */
+</script>
+
+</div>
+
+<div class="card">
+
+<h2>How to Resize an Image Online</h2>
+
+<p>
+Follow these simple steps to resize your image using SharpToolKit:
+</p>
+
+<ul>
+<li>Select the image you want to resize.</li>
+<li>Enter the desired width and height in pixels.</li>
+<li>Click the resize button.</li>
+<li>Download the resized image.</li>
+</ul>
+
+<p>
+This process happens directly inside your browser which means your images remain private and are not uploaded to any server.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Best Image Sizes for Social Media</h2>
+
+<p>
+Different platforms require different image sizes. Here are some commonly used dimensions:
+</p>
+
+<ul>
+<li>Instagram Post: 1080 × 1080</li>
+<li>Instagram Story: 1080 × 1920</li>
+<li>Facebook Cover: 820 × 312</li>
+<li>YouTube Thumbnail: 1280 × 720</li>
+<li>WhatsApp Image: 800 × 800</li>
+</ul>
+
+<p>
+Using the correct dimensions ensures your images look sharp and professional on social media platforms.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Resize Images Without Losing Quality</h2>
+
+<p>
+When resizing images, it is important to maintain good quality. 
+SnapToolKit uses modern browser technology to redraw the image at the new size while preserving visual clarity.
+</p>
+
+<p>
+If you want to reduce file size further, you can also use our 
+<a href="compress.html">Compress Image Tool</a>. 
+This helps reduce storage space and speeds up website loading times.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© SharpToolKit – Free Mobile Image Tools
+
+</footer>
+
+<script>
+
+function resizeImage(){
+
+const input = document.getElementById("imageInput")
+
+if(!input.files.length){
+alert("Please select an image")
+return
+}
+
+const width = document.getElementById("widthInput").value
+const height = document.getElementById("heightInput").value
+
+if(!width || !height){
+alert("Please enter width and height")
+return
+}
+
+const file = input.files[0]
+
+const reader = new FileReader()
+
+reader.onload = function(e){
+
+const img = new Image()
+
+img.src = e.target.result
+
+img.onload = function(){
+
+const canvas = document.createElement("canvas")
+const ctx = canvas.getContext("2d")
+
+canvas.width = width
+canvas.height = height
+
+ctx.drawImage(img,0,0,width,height)
+
+const resized = canvas.toDataURL("image/jpeg",0.9)
+
+document.getElementById("preview").src = resized
+
+const link = document.getElementById("downloadLink")
+const btn = document.getElementById("downloadBtn")
+
+link.href = resized
+btn.style.display="inline-block"
+
+}
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+</script>
+
+</body>
+</html>

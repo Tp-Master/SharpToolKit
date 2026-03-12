@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>PNG to JPG Converter Online Free | SharpToolKit</title>
+
+<meta name="description" content="Convert PNG to JPG online for free using SharpToolKit. Fast mobile-friendly PNG to JPG converter with instant download.">
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#ff0055,#ff7a95);
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+justify-content:space-around;
+background:white;
+padding:12px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:16px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+button{
+background:#ff0055;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3377;
+}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:8px;
+}
+
+footer{
+background:#111827;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>SharpToolKit</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Convert PNG to JPG Online</h1>
+
+<p>
+SharpToolKit allows you to convert PNG images to JPG format quickly and easily. 
+This tool runs directly inside your browser, so your images stay private and secure.
+</p>
+
+<p>
+JPG images usually have smaller file sizes than PNG files, making them ideal for websites, emails, and faster uploads.
+</p>
+
+<input type="file" id="imageInput" accept="image/png">
+
+<br><br>
+
+<button onclick="convertImage()">Convert to JPG</button>
+
+<br><br>
+
+<img id="preview">
+
+<br><br>
+
+<a id="downloadLink" download="converted-image.jpg">
+<button id="downloadBtn" style="display:none;">Download JPG</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<!-- Monetag Ads -->
+<script>
+/* Paste Monetag code here */
+</script>
+
+</div>
+
+<div class="card">
+
+<h2>How to Convert PNG to JPG</h2>
+
+<p>
+Follow these simple steps to convert your PNG image:
+</p>
+
+<ul>
+<li>Select the PNG file from your phone or computer.</li>
+<li>Click the convert button.</li>
+<li>The image will be converted instantly.</li>
+<li>Download the new JPG file.</li>
+</ul>
+
+<p>
+The conversion is fast and works directly in your browser without uploading your images to a server.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Why Convert PNG to JPG?</h2>
+
+<p>
+PNG images often have larger file sizes compared to JPG images. Converting to JPG can help reduce file size and make images easier to share online.
+</p>
+
+<ul>
+<li>Smaller image files</li>
+<li>Faster website loading</li>
+<li>Easier email attachments</li>
+<li>Better for photos</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>PNG vs JPG Image Format</h2>
+
+<p>
+Both formats are widely used on the internet, but they serve different purposes.
+</p>
+
+<ul>
+<li><b>PNG</b> – Best for graphics, logos, and transparent images.</li>
+<li><b>JPG</b> – Best for photos and smaller file sizes.</li>
+</ul>
+
+<p>
+If you need transparent backgrounds, PNG is the better choice. 
+If you want smaller file sizes, JPG is usually the better option.
+</p>
+
+<p>
+You can also try our 
+<a href="jpg-to-png.html">JPG to PNG converter</a> 
+or 
+<a href="compress.html">image compression tool</a>.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© SharpToolKit – Free Mobile Image Tools
+
+</footer>
+
+<script>
+
+function convertImage(){
+
+const input = document.getElementById("imageInput")
+
+if(!input.files.length){
+alert("Please select a PNG image")
+return
+}
+
+const file = input.files[0]
+
+const reader = new FileReader()
+
+reader.onload = function(e){
+
+const img = new Image()
+
+img.src = e.target.result
+
+img.onload = function(){
+
+const canvas = document.createElement("canvas")
+const ctx = canvas.getContext("2d")
+
+canvas.width = img.width
+canvas.height = img.height
+
+ctx.fillStyle = "#ffffff"
+ctx.fillRect(0,0,canvas.width,canvas.height)
+
+ctx.drawImage(img,0,0)
+
+const jpg = canvas.toDataURL("image/jpeg",0.9)
+
+document.getElementById("preview").src = jpg
+
+const link = document.getElementById("downloadLink")
+const btn = document.getElementById("downloadBtn")
+
+link.href = jpg
+btn.style.display="inline-block"
+
+}
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SharpToolKit – Free Online Image Tools</title>
+<meta name="description" content="SharpToolKit provides free online image tools including compress, resize, crop, JPG to PNG, PNG to JPG. Modern, responsive, and mobile-friendly.">
+<style>
+/* GLOBAL STYLES */
+body{margin:0;font-family:'Segoe UI',Arial,Helvetica,sans-serif;color:#222;line-height:1.6;background:#f5f6fa;}
+a{text-decoration:none;color:#ff0055;transition:0.3s;} a:hover{text-decoration:underline;}
+h1,h2,h3{margin:0 0 15px 0;font-weight:700;}
+p{margin-bottom:16px;}
+button{cursor:pointer;font-weight:600;}
+
+
+/* HERO SECTION */
+.hero{
+  background:linear-gradient(120deg,#ff0055,#ff7a95);
+  color:white;text-align:center;padding:120px 20px;
+  background-size:400% 400%; animation: gradientBG 15s ease infinite;
+}
+.hero h1{font-size:48px;animation: fadeInUp 1s ease forwards; opacity:0;}
+.hero p{font-size:20px;margin-top:15px;animation: fadeInUp 1.2s ease forwards; opacity:0;}
+.hero button{
+  margin-top:30px;padding:16px 30px;border-radius:12px;border:none;font-size:18px;background:#fff;color:#ff0055;box-shadow:0 6px 20px rgba(255,0,85,0.4);transition:0.3s;
+}
+.hero button:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(255,0,85,0.5);}
+
+/* ANIMATIONS */
+@keyframes gradientBG{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+@keyframes fadeInUp{
+  to{opacity:1;transform:translateY(0);}
+  from{opacity:0;transform:translateY(30px);}
+}
+
+/* CONTAINER */
+.container{max-width:1200px;margin:auto;padding:40px 20px;}
+
+/* TOOL CARDS GRID */
+.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
+.tool-card{
+  background:white;padding:25px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.1);text-align:center;
+  transition:transform 0.3s,box-shadow 0.3s;
+}
+.tool-card:hover{transform:translateY(-10px) rotateX(2deg) rotateY(2deg);box-shadow:0 30px 60px rgba(0,0,0,0.15);}
+.tool-card img{width:60px;margin-bottom:15px;}
+
+/* SECTION BACKGROUNDS */
+.section-alt{background:#f1f3f6;padding:60px 20px;border-radius:20px;}
+
+/* BUTTONS */
+.btn-primary{background:#ff0055;color:white;padding:14px 28px;border:none;border-radius:12px;font-size:16px;box-shadow:0 6px 15px rgba(255,0,85,0.4);transition:0.3s;}
+.btn-primary:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(255,0,85,0.5);}
+
+/* FOOTER */
+footer{background:#111827;color:#ddd;text-align:center;padding:30px;font-size:14px;margin-top:40px;}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-container">
+    <div class="nav-logo">SharpToolKit</div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="compress.html">Compress</a>
+      <a href="resize.html">Resize</a>
+      <a href="jpg-to-png.html">JPG→PNG</a>
+      <a href="png-to-jpg.html">PNG→JPG</a>
+      <a href="crop.html">Crop</a>
+    </div>
+    <div class="nav-toggle" id="navToggle">&#9776;</div>
+  </div>
+</nav>
+
+<style>
+/* NAVIGATION STYLES */
+nav{background:#fff;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0;z-index:100;}
+.nav-container{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;padding:10px 20px;flex-wrap:wrap;}
+.nav-logo{font-weight:700;color:#ff0055;font-size:20px;}
+.nav-links{display:flex;gap:15px;}
+.nav-links a{color:#222;font-weight:600;font-size:16px;transition:0.3s;}
+.nav-links a:hover{color:#ff0055;}
+.nav-toggle{display:none;font-size:28px;cursor:pointer;color:#222;}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:768px){
+  .nav-links{flex-direction:column;width:100%;display:none;margin-top:10px;}
+  .nav-links.active{display:flex;}
+  .nav-toggle{display:block;}
+}
+</style>
+
+<script>
+// TOGGLE MOBILE MENU
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+
+<!-- HERO SECTION -->
+<section class="hero">
+<h1>SharpToolKit – Free Online Image Tools</h1>
+<p>Compress, resize, crop, and convert images instantly. Fully mobile-friendly and secure.</p>
+<button onclick="window.location.href='compress.html'">Try Tools Now</button>
+</section>
+
+<div class="container">
+
+<div class="card">
+<h1 style="text-align:center;margin-bottom:40px;">Welcome to SharpToolKit</h1>
+<p>SharpToolKit is the easiest way to edit and optimize images directly from your mobile phone. Whether you want to compress a large photo, resize it for social media, convert JPG to PNG, or crop it perfectly, SnapToolKit provides simple, fast, and free tools without requiring downloads or registration.</p>
+<p>Our website is designed for mobile users first, with easy-to-tap buttons and quick results. Every tool is optimized to maintain high-quality images while making them smaller or ready for your online needs.</p>
+</div>
+
+<!-- TOOL CARDS SECTION -->
+<section class="container">
+<h2 style="text-align:center;margin-bottom:40px;">Our Tools</h2>
+<div class="card">
+<p>We provide six essential tools for anyone who works with images on mobile:</p>
+<ul>
+<li><strong>Compress Image:</strong> Reduce file size without losing quality. Perfect for uploading to social media or sending via chat apps.</li>
+<li><strong>Resize Image:</strong> Change the dimensions of your photos to fit Instagram posts, profile pictures, or website requirements.</li>
+<li><strong>JPG to PNG:</strong> Convert JPG images to PNG format for higher quality or transparent backgrounds.</li>
+<li><strong>PNG to JPG:</strong> Convert PNG images to JPG to reduce file size and improve compatibility.</li>
+<li><strong>Crop Image:</strong> Cut out unwanted parts and focus on the important area in your photo.</li>
+</ul>
+
+<div class="tool-grid">
+  <div class="tool-card">
+    <img src="https://img.icons8.com/ios/100/000000/compress.png" alt="Compress">
+    <h3>Compress Images</h3>
+    <p>Reduce file size without losing quality. Perfect for websites, emails, and social media.</p>
+    <button class="btn-primary" onclick="window.location.href='compress.html'">Try Compress</button>
+  </div>
+  <div class="tool-card">
+    <img src="https://img.icons8.com/ios/100/000000/resize.png" alt="Resize">
+    <h3>Resize Images</h3>
+    <p>Adjust width and height while maintaining clarity. Ideal for profile photos and banners.</p>
+    <button class="btn-primary" onclick="window.location.href='resize.html'">Try Resize</button>
+  </div>
+  <div class="tool-card">
+    <img src="https://img.icons8.com/ios/100/000000/jpg.png" alt="JPG to PNG">
+    <h3>JPG to PNG</h3>
+    <p>Convert images to PNG for better quality or transparency. Fast and free.</p>
+    <button class="btn-primary" onclick="window.location.href='jpg-to-png.html'">Try JPG→PNG</button>
+  </div>
+  <div class="tool-card">
+    <img src="https://img.icons8.com/ios/100/000000/png.png" alt="PNG to JPG">
+    <h3>PNG to JPG</h3>
+    <p>Convert PNG files to JPG for smaller size and faster upload. Simple and quick.</p>
+    <button class="btn-primary" onclick="window.location.href='png-to-jpg.html'">Try PNG→JPG</button>
+  </div>
+  <div class="tool-card">
+    <img src="https://img.icons8.com/ios/100/000000/crop.png" alt="Crop">
+    <h3>Crop Images</h3>
+    <p>Select and crop the exact area you want. Adjustable, precise, and mobile-friendly.</p>
+    <button class="btn-primary" onclick="window.location.href='crop.html'">Try Crop</button>
+  </div>
+</div>
+
+</section>
+
+<div class="card">
+<h2 style="text-align:center;margin-bottom:40px;">Why SharpToolKit is Perfect for Mobile</h2>
+<p>Editing images on your phone can be frustrating with apps that are slow or require accounts. SharpToolKit simplifies this by providing:</p>
+<ul>
+<li>Instant online tools that work in your browser</li>
+<li>High-quality output images</li>
+<li>No downloads, installations, or login required</li>
+<li>Mobile-first design for easy navigation</li>
+</ul>
+<p>Each tool is optimized for small screens, so you can perform multiple edits without leaving the page. After compressing an image, you can quickly <a href="resize.html">resize it</a> or <a href="jpg-to-png.html">convert it to PNG</a> for your projects.</p>
+</div>
+
+<div class="card">
+<h2 style="text-align:center;margin-bottom:40px;">Tips for Using SharpToolKit Effectively</h2>
+<ul>
+<li>Always keep a copy of your original image before editing.</li>
+<li>Compress images before uploading to websites to improve page speed.</li>
+<li>Resize images for social media to fit the recommended dimensions.</li>
+<li>Use JPG to PNG for logos or images that need a transparent background.</li>
+<li>Crop images to remove unwanted parts and focus on the main subject.</li>
+</ul>
+<p>Following these tips ensures your images look professional and load quickly on websites or apps.</p>
+</div>
+
+<!-- CTA SECTION -->
+<section class="container" style="text-align:center;margin:60px 0;">
+<h2>Get Started Now</h2>
+<p>Optimize your images for web, social media, or email with SharpToolKit’s free online tools.</p>
+<button class="btn-primary" onclick="window.location.href='compress.html'">Start Compressing Images</button>
+</section>
+
+<!-- AD PLACEHOLDER -->
+<div class="container" style="text-align:center;margin-bottom:40px;">
+<script>
+/* Monetag / AdSense ad code here */
+</script>
+</div>
+
+<footer>
+© SharpToolKit - Free Mobile Image Tools<br>
+Fast, simple, and mobile-friendly image tools for everyone.
+</footer>
+
+</body>
+</html>

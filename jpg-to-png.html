@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>JPG to PNG Converter Online Free | SharpToolKit</title>
+
+<meta name="description" content="Convert JPG to PNG online for free. Fast and mobile-friendly JPG to PNG converter with no uploads required.">
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#ff0055,#ff7a95);
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+justify-content:space-around;
+background:white;
+padding:12px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:16px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+button{
+background:#ff0055;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3377;
+}
+
+img{
+max-width:100%;
+margin-top:15px;
+border-radius:8px;
+}
+
+footer{
+background:#111827;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>SharpToolKit</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Convert JPG to PNG Online</h1>
+
+<p>
+Use SharpToolKit to convert JPG images to PNG format quickly and easily. 
+This tool works directly in your browser, which means your images stay private and are never uploaded to a server.
+</p>
+
+<p>
+PNG images support better quality and transparency, making them ideal for logos, graphics, and web design.
+</p>
+
+<input type="file" id="imageInput" accept="image/jpeg">
+
+<br><br>
+
+<button onclick="convertImage()">Convert to PNG</button>
+
+<br><br>
+
+<img id="preview">
+
+<br><br>
+
+<a id="downloadLink" download="converted-image.png">
+<button id="downloadBtn" style="display:none;">Download PNG</button>
+</a>
+
+</div>
+
+<div class="card">
+
+<!-- Monetag Ads -->
+<script>
+/* Paste Monetag ads here */
+</script>
+
+</div>
+
+<div class="card">
+
+<h2>How to Convert JPG to PNG</h2>
+
+<p>
+Follow these simple steps:
+</p>
+
+<ul>
+<li>Select the JPG image from your phone or computer.</li>
+<li>Click the convert button.</li>
+<li>The image will instantly convert to PNG format.</li>
+<li>Download the PNG file.</li>
+</ul>
+
+<p>
+The conversion happens instantly using modern browser technology.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>JPG vs PNG – What's the Difference?</h2>
+
+<p>
+JPG and PNG are two popular image formats used on the internet.
+</p>
+
+<ul>
+<li><b>JPG</b> – Smaller file size, ideal for photos.</li>
+<li><b>PNG</b> – Higher quality, supports transparent backgrounds.</li>
+</ul>
+
+<p>
+If you are working with graphics, icons, or logos, PNG is usually the better option.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>When Should You Use PNG Images?</h2>
+
+<p>
+PNG images are commonly used for:
+</p>
+
+<ul>
+<li>Website logos</li>
+<li>Graphic design</li>
+<li>Transparent backgrounds</li>
+<li>High-quality graphics</li>
+</ul>
+
+<p>
+If you want to reduce the file size after converting, you can use our
+<a href="compress.html">Image Compression Tool</a>.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+© SharpToolKit – Free Mobile Image Tools
+
+</footer>
+
+<script>
+
+function convertImage(){
+
+const input = document.getElementById("imageInput")
+
+if(!input.files.length){
+alert("Please select a JPG image")
+return
+}
+
+const file = input.files[0]
+
+const reader = new FileReader()
+
+reader.onload = function(e){
+
+const img = new Image()
+
+img.src = e.target.result
+
+img.onload = function(){
+
+const canvas = document.createElement("canvas")
+const ctx = canvas.getContext("2d")
+
+canvas.width = img.width
+canvas.height = img.height
+
+ctx.drawImage(img,0,0)
+
+const png = canvas.toDataURL("image/png")
+
+document.getElementById("preview").src = png
+
+const link = document.getElementById("downloadLink")
+const btn = document.getElementById("downloadBtn")
+
+link.href = png
+btn.style.display="inline-block"
+
+}
+
+}
+
+reader.readAsDataURL(file)
+
+}
+
+</script>
+
+</body>
+</html>

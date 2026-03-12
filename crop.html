@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Advanced Crop Image Online | SharpToolKit</title>
+<meta name="description" content="Crop images online with adjustable selection. Drag, resize, and download cropped images. Mobile-friendly and fast.">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:0;background:#f5f6fa;color:#222}
+header{background:linear-gradient(90deg,#ff0055,#ff7a95);color:white;padding:20px;text-align:center;font-size:24px;font-weight:bold}
+nav{display:flex;justify-content:space-around;background:white;padding:12px;box-shadow:0 2px 6px rgba(0,0,0,0.1);position:sticky;top:0}
+nav a{text-decoration:none;color:#222;font-weight:600}
+.container{max-width:900px;margin:auto;padding:16px}
+.card{background:white;padding:20px;border-radius:10px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,0.08)}
+button{background:#ff0055;border:none;color:white;padding:12px 18px;border-radius:8px;font-size:16px;cursor:pointer}
+button:hover{background:#ff3377}
+canvas{max-width:100%;border-radius:8px;margin-top:15px;border:1px solid #ccc;touch-action:none}
+footer{background:#111827;color:#ddd;text-align:center;padding:20px;font-size:14px}
+</style>
+</head>
+<body>
+
+<header>SharpToolKit</header>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h1>Advanced Crop Image Online</h1>
+<p>
+SharpToolKit allows you to crop images online quickly and easily. 
+Cropping lets you remove unwanted areas from your photo and focus on the most important part of the image.
+</p>
+
+<p>
+This tool works directly in your browser, which means your photos stay private and are never uploaded to a server.
+</p>
+
+<input type="file" id="imageInput" accept="image/*">
+<br><br>
+<canvas id="canvas"></canvas>
+<br><br>
+<button id="cropBtn">Crop Image</button>
+<br><br>
+<a id="downloadLink" download="cropped-image.jpg">
+<button id="downloadBtn" style="display:none;">Download Cropped Image</button>
+</a>
+</div>
+
+<div class="card">
+<!-- Monetag ads -->
+<script>
+/* Monetag ads go here */
+</script>
+</div>
+
+<div class="card">
+<h2>How to Crop an Image</h2>
+
+<p>
+Cropping an image helps remove unwanted areas and improves composition.
+</p>
+
+<ul>
+<li>Select the image you want to crop.</li>
+<li>The image will appear on the screen.</li>
+<li>Click the crop button to crop the center area.</li>
+<li>Download the cropped image.</li>
+</ul>
+
+<p>
+Cropping is commonly used when editing profile pictures, social media images, or thumbnails.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Why Crop Photos?</h2>
+
+<p>
+Cropping is one of the most common photo editing tasks. It helps remove unnecessary elements and keeps the viewer focused on the subject.
+</p>
+
+<ul>
+<li>Improve photo composition</li>
+<li>Remove unwanted objects</li>
+<li>Adjust aspect ratio</li>
+<li>Create better thumbnails</li>
+</ul>
+
+<p>
+You can also use our other tools like 
+<a href="compress.html">image compression</a> or 
+<a href="resize.html">image resizing</a> after cropping.
+</p>
+
+</div>
+
+<footer>© SharpToolKit – Free Mobile Image Tools</footer>
+
+<script>
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+let img = new Image();
+
+let rect = {x:50,y:50,w:200,h:200};
+let drag = false;
+let resizeDrag = false;
+let currentHandle = null;
+const handleSize = 12;
+
+document.getElementById("imageInput").addEventListener("change", function(e){
+    const file = e.target.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = function(event){
+        img.src = event.target.result;
+        img.onload = function(){
+            canvas.width = img.width>800?800:img.width;
+            canvas.height = img.height>600?600:img.height;
+            rect = {x:canvas.width/4,y:canvas.height/4,w:canvas.width/2,h:canvas.height/2};
+            draw();
+        }
+    }
+    reader.readAsDataURL(file);
+});
+
+function draw(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(img,0,0,canvas.width,canvas.height);
+    // overlay
+    ctx.strokeStyle="red";
+    ctx.lineWidth=2;
+    ctx.strokeRect(rect.x,rect.y,rect.w,rect.h);
+    // handles
+    const handles = getHandles();
+    ctx.fillStyle="white";
+    ctx.strokeStyle="black";
+    handles.forEach(h=>{
+        ctx.fillRect(h.x,h.y,handleSize,handleSize);
+        ctx.strokeRect(h.x,h.y,handleSize,handleSize);
+    });
+}
+
+function getHandles(){
+    return [
+        {x:rect.x-handleSize/2,y:rect.y-handleSize/2,name:"tl"},
+        {x:rect.x+rect.w-handleSize/2,y:rect.y-handleSize/2,name:"tr"},
+        {x:rect.x-handleSize/2,y:rect.y+rect.h-handleSize/2,name:"bl"},
+        {x:rect.x+rect.w-handleSize/2,y:rect.y+rect.h-handleSize/2,name:"br"}
+    ];
+}
+
+function mousePos(evt){
+    const rectC = canvas.getBoundingClientRect();
+    let x, y;
+    if(evt.touches){
+        x = evt.touches[0].clientX - rectC.left;
+        y = evt.touches[0].clientY - rectC.top;
+    } else {
+        x = evt.clientX - rectC.left;
+        y = evt.clientY - rectC.top;
+    }
+    return {x,y};
+}
+
+function checkHandle(pos){
+    const handles = getHandles();
+    for(const h of handles){
+        if(pos.x>=h.x && pos.x<=h.x+handleSize && pos.y>=h.y && pos.y<=h.y+handleSize) return h.name;
+    }
+    return null;
+}
+
+canvas.addEventListener("mousedown",startDrag);
+canvas.addEventListener("touchstart",startDrag);
+canvas.addEventListener("mousemove",dragRect);
+canvas.addEventListener("touchmove",dragRect);
+canvas.addEventListener("mouseup",endDrag);
+canvas.addEventListener("touchend",endDrag);
+
+let offsetX, offsetY;
+
+function startDrag(evt){
+    const pos = mousePos(evt);
+    currentHandle = checkHandle(pos);
+    if(currentHandle){
+        resizeDrag = true;
+    } else if(pos.x>rect.x && pos.x<rect.x+rect.w && pos.y>rect.y && pos.y<rect.y+rect.h){
+        drag = true;
+        offsetX = pos.x-rect.x;
+        offsetY = pos.y-rect.y;
+    }
+}
+
+function dragRect(evt){
+    if(!drag && !resizeDrag) return;
+    evt.preventDefault();
+    const pos = mousePos(evt);
+    if(drag){
+        rect.x = pos.x - offsetX;
+        rect.y = pos.y - offsetY;
+        rect.x = Math.max(0,Math.min(canvas.width-rect.w,rect.x));
+        rect.y = Math.max(0,Math.min(canvas.height-rect.h,rect.y));
+    } else if(resizeDrag){
+        switch(currentHandle){
+            case "tl":
+                rect.w += rect.x-pos.x;
+                rect.h += rect.y-pos.y;
+                rect.x = pos.x;
+                rect.y = pos.y;
+                break;
+            case "tr":
+                rect.w = pos.x-rect.x;
+                rect.h += rect.y-pos.y;
+                rect.y = pos.y;
+                break;
+            case "bl":
+                rect.w += rect.x-pos.x;
+                rect.h = pos.y-rect.y;
+                rect.x = pos.x;
+                break;
+            case "br":
+                rect.w = pos.x-rect.x;
+                rect.h = pos.y-rect.y;
+                break;
+        }
+        if(rect.w<10) rect.w=10;
+        if(rect.h<10) rect.h=10;
+    }
+    draw();
+}
+
+function endDrag(){drag=false;resizeDrag=false;}
+
+document.getElementById("cropBtn").addEventListener("click", function(){
+    if(!img.src) {alert("Select an image"); return;}
+    const newCanvas = document.createElement("canvas");
+    newCanvas.width = rect.w;
+    newCanvas.height = rect.h;
+    const newCtx = newCanvas.getContext("2d");
+    const scaleX = img.width/canvas.width;
+    const scaleY = img.height/canvas.height;
+    newCtx.drawImage(img, rect.x*scaleX, rect.y*scaleY, rect.w*scaleX, rect.h*scaleY, 0,0,rect.w,rect.h);
+    const cropped = newCanvas.toDataURL("image/jpeg",0.9);
+    const preview = new Image();
+    preview.src = cropped;
+    canvas.width = rect.w;
+    canvas.height = rect.h;
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    ctx.drawImage(preview,0,0);
+    const link = document.getElementById("downloadLink");
+    const btn = document.getElementById("downloadBtn");
+    link.href = cropped;
+    btn.style.display="inline-block";
+});
+</script>
+
+</body>
+</html>
