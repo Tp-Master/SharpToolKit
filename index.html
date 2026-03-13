@@ -1,12 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SharpToolKit – Free Online Image Tools</title>
+<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/images/Logo.png?raw=true" type="image/png">
 <meta name="description" content="SharpToolKit provides free online image tools including compress, resize, crop, JPG to PNG, PNG to JPG. Modern, responsive, and mobile-friendly.">
 <style>
-<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/images/Logo.png?raw=true" type="image/png">  
 /* GLOBAL STYLES */
 body{margin:0;font-family:'Segoe UI',Arial,Helvetica,sans-serif;color:#222;line-height:1.6;background:#f5f6fa;}
 a{text-decoration:none;color:#ff0055;transition:0.3s;} a:hover{text-decoration:underline;}
@@ -16,17 +17,62 @@ button{cursor:pointer;font-weight:600;}
 
 
 /* HERO SECTION */
+
 .hero{
-  background:linear-gradient(120deg,#ff0055,#ff7a95);
-  color:white;text-align:center;padding:120px 20px;
-  background-size:400% 400%; animation: gradientBG 15s ease infinite;
+  background:url("file:///C:/Users/TEEPEE/Desktop/Sharp%20ToolKit/images/Editing%20tools%20and%20creative%20workspace.png") center/cover no-repeat;
+  color:white;
+  text-align:center;
+  padding:120px 20px;
+  position:relative;
 }
-.hero h1{font-size:48px;animation: fadeInUp 1s ease forwards; opacity:0;}
-.hero p{font-size:20px;margin-top:15px;animation: fadeInUp 1.2s ease forwards; opacity:0;}
+
+/* dark overlay so text is readable */
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.55);
+}
+
+/* keep text above overlay */
+.hero h1,
+.hero p,
 .hero button{
-  margin-top:30px;padding:16px 30px;border-radius:12px;border:none;font-size:18px;background:#fff;color:#ff0055;box-shadow:0 6px 20px rgba(255,0,85,0.4);transition:0.3s;
+  position:relative;
 }
-.hero button:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(255,0,85,0.5);}
+
+.hero h1{
+  font-size:48px;
+  animation:fadeInUp 1s ease forwards;
+  opacity:0;
+}
+
+.hero p{
+  font-size:20px;
+  margin-top:15px;
+  animation:fadeInUp 1.2s ease forwards;
+  opacity:0;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:16px 30px;
+  border-radius:12px;
+  border:none;
+  font-size:18px;
+  background:#fff;
+  color:#ff0055;
+  box-shadow:0 6px 20px rgba(255,0,85,0.4);
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 25px rgba(255,0,85,0.5);
+}
 
 /* ANIMATIONS */
 @keyframes gradientBG{
@@ -160,8 +206,9 @@ navToggle.addEventListener('click', () => {
 
 <!-- HERO SECTION -->
 <section class="hero">
-<h1>SharpToolKit – Free Online Image Tools</h1>
-<p>Compress, resize, crop, and convert images instantly. Fully mobile-friendly and secure.</p>
+<h1>Free Online Image Tools</h1>
+<p>Compress, resize, crop and convert images instantly with SharpToolKit.
+Fast, secure and works on mobile and desktop.</p>
 <button onclick="window.location.href='compress.html'">Try Tools Now</button>
 </section>
 
@@ -298,9 +345,3 @@ navToggle.addEventListener('click', () => {
 </body>
 
 </html>
-
-
-
-
-
-
