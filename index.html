@@ -185,10 +185,92 @@ z-index:999;
 .whatsapp-float:hover{
 transform:scale(1.1);
 }  
+
+.share-container{
+position:fixed;
+bottom:90px;
+right:20px;
+z-index:999;
+}
+
+.share-main{
+width:60px;
+height:60px;
+border:none;
+border-radius:50%;
+
+background:#ff0055;
+color:white;
+
+font-size:24px;
+cursor:pointer;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+.share-menu{
+display:none;
+flex-direction:column;
+
+background:white;
+
+border-radius:12px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.25);
+
+margin-bottom:10px;
+
+overflow:hidden;
+}
+
+.share-menu button{
+
+padding:12px 18px;
+
+border:none;
+background:white;
+
+text-align:left;
+
+font-size:14px;
+
+cursor:pointer;
+
+border-bottom:1px solid #eee;
+
+}
+
+.share-menu button:hover{
+background:#f5f5f5;
+}
   
 </style>
 </head>
 <body>
+
+<div class="share-container">
+
+<button class="share-main" onclick="toggleShare()">🔗</button>
+
+<div class="share-menu" id="shareMenu">
+
+<button onclick="nativeShare()">📱 Share</button>
+
+<button onclick="shareWhatsApp()">WhatsApp</button>
+
+<button onclick="shareFacebook()">Facebook</button>
+
+<button onclick="shareTwitter()">Twitter</button>
+
+<button onclick="shareTelegram()">Telegram</button>
+
+<button onclick="shareInstagram()">Instagram</button>
+
+<button onclick="copyLink()">Copy Link</button>
+
+</div>
+
+</div>    
 
 <a href="https://wa.me/27821234567" class="whatsapp-float" target="_blank">
 <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="32">
@@ -373,6 +455,89 @@ Fast, secure and works on mobile and desktop.</p>
 <div class="footer-bottom">
 © 2026 SharpToolKit. All rights reserved.
 </div>
+
+<script>
+
+function toggleShare(){
+
+let menu = document.getElementById("shareMenu");
+
+if(menu.style.display === "flex"){
+menu.style.display = "none";
+}else{
+menu.style.display = "flex";
+}
+
+}
+
+function nativeShare(){
+
+if(navigator.share){
+
+navigator.share({
+title:document.title,
+url:location.href
+});
+
+}else{
+
+alert("Sharing not supported on this device");
+
+}
+
+}
+
+function shareWhatsApp(){
+
+window.open(
+"https://wa.me/?text="+encodeURIComponent(document.title+" "+location.href)
+);
+
+}
+
+function shareFacebook(){
+
+window.open(
+"https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href)
+);
+
+}
+
+function shareTwitter(){
+
+window.open(
+"https://twitter.com/intent/tweet?url="+encodeURIComponent(location.href)
+);
+
+}
+
+function shareTelegram(){
+
+window.open(
+"https://t.me/share/url?url="+encodeURIComponent(location.href)
+);
+
+}
+
+function shareInstagram(){
+
+navigator.clipboard.writeText(location.href);
+
+alert("Link copied! Paste it on Instagram.");
+
+window.open("https://www.instagram.com/");
+
+}
+
+function copyLink(){
+
+navigator.clipboard.writeText(location.href);
+
+alert("Link copied!");
+
+}
+
+</script>
 
 </body>
 
