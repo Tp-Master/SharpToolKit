@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Image to PDF Converter Online Free | SharpToolKit</title>
+<meta name="description" content="Convert images to PDF online free. Turn JPG and PNG images into a PDF document instantly using SharpToolKit.">
+
+<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/images/Logo.png?raw=true" type="image/png">
+
+<style>
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#ff0055,#ff7a95);
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+/* MAIN MENU BAR */
+
+.main-menu{
+display:flex;
+justify-content:flex-end;
+gap:25px;
+background:#111;
+padding:10px 20px;
+}
+
+/* MENU LINKS */
+
+.main-menu a{
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+transition:0.25s;
+}
+
+/* HOVER */
+
+.main-menu a:hover{
+background:#333;
+}
+
+/* ACTIVE PAGE */
+
+.main-menu a.active{
+background:#ff0055;
+}
+
+/* TOOLS MENU */
+
+.tools-menu{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:12px;
+background:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* TOOL BUTTON */
+
+.tools-menu a{
+flex:0 0 auto;
+padding:8px 16px;
+background:#f1f2f6;
+border-radius:20px;
+font-size:14px;
+text-decoration:none;
+color:#333;
+white-space:nowrap;
+font-weight:600;
+transition:0.25s;
+}
+
+/* TOOL HOVER */
+
+.tools-menu a:hover{
+background:#ff0055;
+color:white;
+transform:translateY(-2px);
+}
+
+/* ACTIVE TOOL */
+
+.tools-menu a.active{
+background:#ff0055;
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-menu{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:16px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+input{
+padding:10px;
+margin:6px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#ff0055;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3377;
+}
+
+footer{
+background:#111827;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+.footer{
+background:#0f172a;
+color:#ddd;
+padding:50px 20px 20px;
+margin-top:60px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.footer-col h3{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col h4{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-col a{
+display:block;
+color:#bbb;
+margin:6px 0;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col a:hover{
+color:#ff0055;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid #333;
+padding-top:20px;
+font-size:14px;
+} 
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+
+background:#25D366;
+color:white;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+
+text-decoration:none;
+
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+
+z-index:999;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}  
+
+</style>
+
+</head>
+
+<body>
+    
+<a href="https://wa.me/27821234567" class="whatsapp-float" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="32">
+</a>     
+
+<header>SharpToolKit</header>
+
+<nav class="main-menu">
+
+<a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+<div class="tools-menu">
+
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+<a href="image-to-pdf.html" class="active">Image→PDF</a>
+
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Convert Images to PDF Online</h2>
+
+<p>The Image to PDF tool on SharpToolKit allows you to quickly convert pictures into a PDF document without installing any software. Many people need to turn images into documents for school, work, or sharing online. This tool makes the process simple and fast.</p>
+
+<p>You can upload JPG or PNG images and combine them into a single PDF file. Everything happens directly in your browser, which means your images stay private and secure.</p>
+
+
+<input type="file" id="imageInput" multiple accept="image/*">
+
+<button onclick="convertToPDF()">Convert to PDF</button>
+
+<br><br>
+
+<a id="downloadPDF" style="display:none;" download="SharpToolKit.pdf">
+<button>Download PDF</button>
+</a>
+
+</div>
+
+
+<h2>Why Use Image to PDF?</h2>
+
+<p>PDF files are one of the most widely used document formats. They work on almost every device and keep the formatting the same everywhere. When you convert images into a PDF, it becomes easier to share, print, or upload the file.</p>
+
+<p>Students often use image to PDF tools to convert pictures of notes into a document. Businesses use it to organize receipts, scanned files, or invoices. Instead of sending many separate images, you can combine them into one professional document.</p>
+
+<h2>Fast and Secure Conversion</h2>
+
+<p>SharpToolKit tools are designed for speed and privacy. The conversion process happens inside your browser using modern web technology. Your images are not uploaded to external servers.</p>
+
+<p>This means the conversion is very fast and safe. Even large images can be processed quickly without waiting for uploads.</p>
+
+<h2>Works on Mobile and Desktop</h2>
+
+<p>The Image to PDF converter works perfectly on smartphones, tablets, and computers. Many people take photos with their phones and need a quick way to turn them into a PDF file. This tool is optimized for mobile users and works smoothly on any screen size.</p>
+
+<h2>Free Online Image Tools</h2>
+
+<p>SharpToolKit also provides many other free tools for working with images. You can compress images to reduce file size, resize images for websites or social media, crop photos, and convert between JPG and PNG formats.</p>
+
+<p>All tools are easy to use and designed to work quickly. If you need a fast way to convert images into a PDF document, this tool is a simple and reliable solution.</p>
+
+
+<h2>Convert Images to PDF Online</h2>
+
+<p>The <strong>Image to PDF converter</strong> on SharpToolKit helps you turn photos into professional PDF documents in seconds. If you need to reduce file size before creating a PDF, you can also use our 
+<a href="compress.html">image compressor tool</a> to make images smaller without losing quality.</p>
+
+<p>You can upload JPG or PNG images and combine them into a single PDF file. If your image size is too large for documents or websites, try our 
+<a href="resize.html">image resizer</a> to adjust width and height before converting.</p>
+
+<h2>Why Convert Images to PDF?</h2>
+
+<p>PDF files are widely used for sharing documents online. Many students convert photos of notes into a PDF file before submitting assignments. Businesses often combine receipts or scanned documents into one file.</p>
+
+<p>If you need to prepare images before converting, SharpToolKit also offers tools like 
+<a href="crop.html">crop image</a> to remove unwanted parts of a photo.</p>
+
+<h2>Convert JPG or PNG to PDF</h2>
+
+<p>This tool supports both JPG and PNG images. If your image format needs conversion first, you can use the 
+<a href="jpg-to-png.html">JPG to PNG converter</a> or the 
+<a href="png-to-jpg.html">PNG to JPG converter</a>.</p>
+
+<p>These tools help you prepare images before turning them into a PDF document.</p>
+
+<h2>More Free Image Tools</h2>
+
+<p>SharpToolKit provides many simple tools for editing images online. Visit the 
+<a href="tools.html">tools page</a> to see all available tools including compression, resizing, cropping, and format conversion.</p>
+
+<p>All tools work directly in your browser, making them fast and easy to use on both mobile phones and desktop computers.</p>
+
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h4>Tools</h4>
+<a href="compress.html">Image Compressor</a>
+<a href="resize.html">Image Resizer</a>
+<a href="crop.html">Crop Image</a>
+<a href="jpg-to-png.html">JPG to PNG</a>
+<a href="png-to-jpg.html">PNG to JPG</a>
+</div>
+
+<div class="footer-col">
+<h4>Website</h4>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms of Service</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SharpToolKit. All rights reserved.
+</div>
+
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+
+async function convertToPDF(){
+
+const { jsPDF } = window.jspdf
+
+const files = document.getElementById("imageInput").files
+
+if(!files.length){
+alert("Please select images first")
+return
+}
+
+const pdf = new jsPDF()
+
+for(let i=0;i<files.length;i++){
+
+const file = files[i]
+
+const reader = new FileReader()
+
+await new Promise(resolve=>{
+
+reader.onload=function(e){
+
+const img=new Image()
+img.src=e.target.result
+
+img.onload=function(){
+
+const width=pdf.internal.pageSize.getWidth()
+const height=(img.height*width)/img.width
+
+if(i>0) pdf.addPage()
+
+pdf.addImage(img,'JPEG',0,0,width,height)
+
+resolve()
+
+}
+
+}
+
+reader.readAsDataURL(file)
+
+})
+
+}
+
+const blob=pdf.output("blob")
+const url=URL.createObjectURL(blob)
+
+const link=document.getElementById("downloadPDF")
+
+link.href=url
+link.style.display="inline-block"
+
+}
+
+</script>
+
+</body>
+</html>
