@@ -28,20 +28,93 @@ font-size:24px;
 font-weight:bold;
 }
 
-nav{
+/* MAIN MENU BAR */
+
+.main-menu{
 display:flex;
-justify-content:space-around;
-background:white;
-padding:12px;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
-position:sticky;
-top:0;
+justify-content:flex-end;
+gap:25px;
+background:#111;
+padding:10px 20px;
 }
 
-nav a{
+/* MENU LINKS */
+
+.main-menu a{
 text-decoration:none;
-color:#222;
+color:white;
 font-weight:600;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+transition:0.25s;
+}
+
+/* HOVER */
+
+.main-menu a:hover{
+background:#333;
+}
+
+/* ACTIVE PAGE */
+
+.main-menu a.active{
+background:#ff0055;
+}
+
+/* TOOLS MENU */
+
+.tools-menu{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:12px;
+background:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* TOOL BUTTON */
+
+.tools-menu a{
+flex:0 0 auto;
+padding:8px 16px;
+background:#f1f2f6;
+border-radius:20px;
+font-size:14px;
+text-decoration:none;
+color:#333;
+white-space:nowrap;
+font-weight:600;
+transition:0.25s;
+}
+
+/* TOOL HOVER */
+
+.tools-menu a:hover{
+background:#ff0055;
+color:white;
+transform:translateY(-2px);
+}
+
+/* ACTIVE TOOL */
+
+.tools-menu a.active{
+background:#ff0055;
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-menu{
+justify-content:center;
+flex-wrap:wrap;
+}
+
 }
 
 .container{
@@ -77,12 +150,6 @@ cursor:pointer;
 
 button:hover{
 background:#ff3377;
-}
-
-img{
-max-width:100%;
-margin-top:15px;
-border-radius:8px;
 }
 
 footer{
@@ -185,14 +252,26 @@ transform:scale(1.1);
 
 <header>SharpToolKit</header>
 
-<nav>
+<nav class="main-menu">
+
 <a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+<div class="tools-menu">
+
 <a href="compress.html">Compress</a>
 <a href="resize.html">Resize</a>
 <a href="jpg-to-png.html">JPG→PNG</a>
 <a href="png-to-jpg.html">PNG→JPG</a>
 <a href="crop.html">Crop</a>
-</nav>
+<a href="image-to-pdf.html">Image→PDF</a>
+
+</div>
 
 <div class="container">
 
@@ -238,16 +317,12 @@ By resizing your image, you can make the file more efficient while still keeping
 
 </div>
 
-<div class="card">
 
 <!-- Monetag ads -->
 <script>
 /* paste monetag script here */
 </script>
 
-</div>
-
-<div class="card">
 
 <h2>How to Resize an Image Online</h2>
 
@@ -266,9 +341,6 @@ Follow these simple steps to resize your image using SharpToolKit:
 This process happens directly inside your browser which means your images remain private and are not uploaded to any server.
 </p>
 
-</div>
-
-<div class="card">
 
 <h2>Best Image Sizes for Social Media</h2>
 
@@ -288,9 +360,7 @@ Different platforms require different image sizes. Here are some commonly used d
 Using the correct dimensions ensures your images look sharp and professional on social media platforms.
 </p>
 
-</div>
 
-<div class="card">
 
 <h2>Resize Images Without Losing Quality</h2>
 
