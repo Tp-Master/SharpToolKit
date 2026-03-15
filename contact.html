@@ -16,22 +16,6 @@ align-items:center;
 padding:10px;
 }
 
-body{
-font-family:Arial,Helvetica,sans-serif;
-margin:0;
-background:#f5f6fa;
-color:#222;
-}
-
-header{
-background:linear-gradient(90deg,#ff0055,#ff7a95);
-color:white;
-padding:20px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
-}
-
 /* MAIN MENU BAR */
 
 .main-menu{
@@ -121,47 +105,94 @@ flex-wrap:wrap;
 
 }
 
+body{
+font-family:Segoe UI, Arial, sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+line-height:1.6;
+}
+
+nav{
+display:flex;
+justify-content:space-around;
+background:white;
+padding:12px;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:600;
+}
+
+nav a:hover{
+color:#ff0055;
+}
+
+.hero{
+background:linear-gradient(120deg,#ff0055,#ff7a95);
+color:white;
+text-align:center;
+padding:80px 20px;
+}
+
 .container{
-max-width:900px;
+max-width:800px;
 margin:auto;
-padding:16px;
+padding:40px 20px;
 }
 
 .card{
 background:white;
-padding:20px;
-border-radius:10px;
-margin-bottom:20px;
-box-shadow:0 2px 8px rgba(0,0,0,0.08);
+padding:30px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,0.1);
 }
 
-input{
-padding:10px;
-margin:6px;
-border-radius:6px;
-border:1px solid #ccc;
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+margin-top:20px;
+}
+
+input, textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ddd;
+font-size:16px;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
 }
 
 button{
 background:#ff0055;
-border:none;
 color:white;
-padding:12px 18px;
-border-radius:8px;
+border:none;
+padding:14px;
+border-radius:10px;
 font-size:16px;
+font-weight:600;
 cursor:pointer;
 }
 
 button:hover{
-background:#ff3377;
+background:#e6004d;
 }
 
 footer{
 background:#111827;
 color:#ddd;
 text-align:center;
-padding:20px;
-font-size:14px;
+padding:25px;
+margin-top:40px;
 }
 
 .footer{
@@ -212,8 +243,8 @@ margin-top:40px;
 border-top:1px solid #333;
 padding-top:20px;
 font-size:14px;
-} 
-
+}
+  
 .whatsapp-float{
 position:fixed;
 bottom:20px;
@@ -242,9 +273,10 @@ z-index:999;
 
 .whatsapp-float:hover{
 transform:scale(1.1);
-}  
-
+}
+  
 </style>
+
 </head>
 
 <body>
