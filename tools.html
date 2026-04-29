@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>All Free Image Tools Online | Compress, Resize, Convert | SharpToolKit</title>
+
+<meta name="description" content="Explore all free image tools on SharpToolKit. Compress, resize, crop, convert JPG, PNG, WebP, HEIC and more. Fast online tools with no download required.">
+
+<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/images/Logo.png?raw=true">
+
+<style>
+
+/* GLOBAL STYLE */
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+margin:0;
+background:#f5f6fa;
+color:#222;
+}
+
+header{
+background:linear-gradient(90deg,#ff0055,#ff7a95);
+color:white;
+padding:20px;
+text-align:center;
+font-size:24px;
+font-weight:bold;
+}
+
+/* MAIN MENU BAR */
+
+.main-menu{
+display:flex;
+justify-content:flex-end;
+gap:25px;
+background:#111;
+padding:10px 20px;
+}
+
+/* MENU LINKS */
+
+.main-menu a{
+text-decoration:none;
+color:white;
+font-weight:600;
+font-size:14px;
+padding:6px 10px;
+border-radius:6px;
+transition:0.25s;
+}
+
+/* HOVER */
+
+.main-menu a:hover{
+background:#333;
+}
+
+/* ACTIVE PAGE */
+
+.main-menu a.active{
+background:#ff0055;
+}
+
+/* TOOLS MENU */
+
+.tools-menu{
+display:flex;
+overflow-x:auto;
+gap:10px;
+padding:12px;
+background:white;
+position:sticky;
+top:0;
+z-index:100;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* TOOL BUTTON */
+
+.tools-menu a{
+flex:0 0 auto;
+padding:8px 16px;
+background:#f1f2f6;
+border-radius:20px;
+font-size:14px;
+text-decoration:none;
+color:#333;
+white-space:nowrap;
+font-weight:600;
+transition:0.25s;
+}
+
+/* TOOL HOVER */
+
+.tools-menu a:hover{
+background:#ff0055;
+color:white;
+transform:translateY(-2px);
+}
+
+/* ACTIVE TOOL */
+
+.tools-menu a.active{
+background:#ff0055;
+color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.main-menu{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:16px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:10px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+input{
+padding:10px;
+margin:6px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#ff0055;
+border:none;
+color:white;
+padding:12px 18px;
+border-radius:8px;
+font-size:16px;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff3377;
+}
+
+footer{
+background:#111827;
+color:#ddd;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+
+.footer{
+background:#0f172a;
+color:#ddd;
+padding:50px 20px 20px;
+margin-top:60px;
+}
+
+.footer-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+.footer-col h3{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col h4{
+color:#fff;
+margin-bottom:10px;
+}
+
+.footer-col p{
+font-size:14px;
+line-height:1.6;
+}
+
+.footer-col a{
+display:block;
+color:#bbb;
+margin:6px 0;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col a:hover{
+color:#ff0055;
+}
+
+.footer-bottom{
+text-align:center;
+margin-top:40px;
+border-top:1px solid #333;
+padding-top:20px;
+font-size:14px;
+} 
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+
+background:#25D366;
+color:white;
+
+width:60px;
+height:60px;
+
+border-radius:50%;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:28px;
+
+text-decoration:none;
+
+box-shadow:0 6px 15px rgba(0,0,0,0.3);
+
+z-index:999;
+}
+
+.whatsapp-float:hover{
+transform:scale(1.1);
+}
+
+/* BLOG CARD */
+
+.blog-card{
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-5px);
+}
+
+.blog-card h2{
+margin-top:0;
+color:#ff0055;
+}
+
+.blog-card p{
+line-height:1.6;
+}
+
+.read-more{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#ff0055;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.read-more:hover{
+background:#ff3377;
+}
+
+.footer{
+background:#0f172a;
+color:#ddd;
+padding:40px 20px;
+margin-top:50px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.footer-col a{
+display:block;
+color:#bbb;
+margin:6px 0;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col a:hover{color:#ff0055;}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+border-top:1px solid #333;
+padding-top:15px;
+font-size:14px;
+}
+
+/* BLOG CARD */
+
+.blog-card{
+background:white;
+padding:20px;
+border-radius:12px;
+margin-bottom:20px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.blog-card:hover{
+transform:translateY(-5px);
+}
+
+.blog-card h2{
+margin-top:0;
+color:#ff0055;
+}
+
+.blog-card p{
+line-height:1.6;
+}
+
+.read-more{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#ff0055;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.read-more:hover{
+background:#ff3377;
+}
+
+.footer{
+background:#0f172a;
+color:#ddd;
+padding:40px 20px;
+margin-top:50px;
+}
+
+.footer-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:30px;
+max-width:1100px;
+margin:auto;
+}
+
+.footer-col a{
+display:block;
+color:#bbb;
+margin:6px 0;
+text-decoration:none;
+font-size:14px;
+}
+
+.footer-col a:hover{color:#ff0055;}
+
+.footer-bottom{
+text-align:center;
+margin-top:30px;
+border-top:1px solid #333;
+padding-top:15px;
+font-size:14px;
+}
+
+/* TOOL GRID */
+
+.tool-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:20px;
+}
+
+.tool-card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
+transition:0.3s;
+text-align:center;
+}
+
+.tool-card:hover{
+transform:translateY(-6px);
+}
+
+.tool-card h3{
+color:#ff0055;
+margin-bottom:10px;
+}
+
+.tool-card p{
+font-size:14px;
+line-height:1.5;
+}
+
+.tool-card a{
+display:inline-block;
+margin-top:10px;
+padding:10px 14px;
+background:#ff0055;
+color:white;
+border-radius:8px;
+text-decoration:none;
+}
+
+.tool-card a:hover{
+background:#ff3377;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+margin-top:30px;
+margin-bottom:10px;
+font-size:28px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>SharpToolKit – All Tools</header>
+
+<nav class="main-menu">
+<a href="index.html">Home</a>
+<a href="tools.html">Tools</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="blog.html">Blog</a>
+</nav>
+
+<div class="tools-menu">
+<a href="compress.html">Compress</a>
+<a href="resize.html">Resize</a>
+<a href="jpg-to-png.html">JPG→PNG</a>
+<a href="png-to-jpg.html">PNG→JPG</a>
+<a href="crop.html">Crop</a>
+<a href="image-to-pdf.html">Image→PDF</a>
+<a href="pdf-to-image.html">PDF→Image</a>
+<a href="webp-converter.html">WebP Tool</a>
+<a href="remove-bg.html">Remove BG</a>
+<a href="heic.html">HEIC Converter </a>
+</div>
+
+<div class="container">
+
+<h1 class="section-title">All Free Image Tools</h1>
+
+<p style="text-align:center;">
+SharpToolKit provides fast, free, and easy online image tools.
+No downloads, no apps, no login required.
+</p>
+
+<div class="tool-grid">
+
+<!-- TOOL 1 -->
+<div class="tool-card">
+<h3>Image Compressor</h3>
+<p>Reduce image file size without losing quality. Perfect for websites and social media.</p>
+<a href="compress.html">Open Tool</a>
+</div>
+
+<!-- TOOL 2 -->
+<div class="tool-card">
+<h3>Image Resizer</h3>
+<p>Resize images to any width or height for Instagram, WhatsApp, or websites.</p>
+<a href="resize.html">Open Tool</a>
+</div>
+
+<!-- TOOL 3 -->
+<div class="tool-card">
+<h3>Crop Image</h3>
+<p>Remove unwanted parts of your image and focus on important areas.</p>
+<a href="crop.html">Open Tool</a>
+</div>
+
+<!-- TOOL 4 -->
+<div class="tool-card">
+<h3>WebP Converter</h3>
+<p>Convert images to WebP format for faster website loading speed.</p>
+<a href="webp.html">Open Tool</a>
+</div>
+
+<!-- TOOL 5 -->
+<div class="tool-card">
+<h3>HEIC Converter</h3>
+<p>Convert iPhone HEIC images to JPG, PNG or WebP easily.</p>
+<a href="heic.html">Open Tool</a>
+</div>
+
+<!-- TOOL 6 -->
+<div class="tool-card">
+<h3>Image to PDF</h3>
+<p>Turn images into PDF documents for school, work, or sharing.</p>
+<a href="image-to-pdf.html">Open Tool</a>
+</div>
+
+<!-- TOOL 7 -->
+<div class="tool-card">
+<h3>JPG to PNG</h3>
+<p>Convert JPG images into PNG format with transparency support.</p>
+<a href="jpg-to-png.html">Open Tool</a>
+</div>
+
+<!-- TOOL 8 -->
+<div class="tool-card">
+<h3>PNG to JPG</h3>
+<p>Convert PNG images into smaller JPG format for easy sharing.</p>
+<a href="png-to-jpg.html">Open Tool</a>
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<div class="footer-col">
+<h4>Tools</h4>
+<a href="compress.html">Image Compressor</a>
+<a href="resize.html">Image Resizer</a>
+<a href="webp.html">WebP Converter</a>
+<a href="heic.html">HEIC Tool</a>
+</div>
+
+<div class="footer-col">
+<h4>Website</h4>
+<a href="index.html">Home</a>
+<a href="tools.html">All Tools</a>
+<a href="blog.html">Blog</a>
+</div>
+
+<div class="footer-col">
+<h4>Legal</h4>
+<a href="privacy.html">Privacy Policy</a>
+<a href="terms.html">Terms</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 SharpToolKit. All rights reserved.
+</div>
+
+</footer>
+
+</body>
+</html>
