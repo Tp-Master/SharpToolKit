@@ -32,6 +32,8 @@ justify-content:center;
 padding:10px;
 }
 
+/* MAIN MENU BAR */
+
 .main-menu{
 display:flex;
 justify-content:flex-end;
@@ -40,19 +42,31 @@ background:#111;
 padding:10px 20px;
 }
 
+/* MENU LINKS */
+
 .main-menu a{
 text-decoration:none;
-color:#fff;
+color:white;
 font-weight:600;
+font-size:14px;
 padding:6px 10px;
 border-radius:6px;
-transition:.3s;
+transition:0.25s;
 }
 
-.main-menu a:hover,
+/* HOVER */
+
+.main-menu a:hover{
+background:#333;
+}
+
+/* ACTIVE PAGE */
+
 .main-menu a.active{
 background:#ff0055;
 }
+
+/* TOOLS MENU */
 
 .tools-menu{
 display:flex;
@@ -63,20 +77,35 @@ background:white;
 position:sticky;
 top:0;
 z-index:100;
-box-shadow:0 2px 6px rgba(0,0,0,.1);
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* TOOL BUTTON */
 
 .tools-menu a{
 flex:0 0 auto;
 padding:8px 16px;
 background:#f1f2f6;
 border-radius:20px;
+font-size:14px;
 text-decoration:none;
 color:#333;
+white-space:nowrap;
 font-weight:600;
+transition:0.25s;
 }
 
+/* TOOL HOVER */
+
 .tools-menu a:hover{
+background:#ff0055;
+color:white;
+transform:translateY(-2px);
+}
+
+/* ACTIVE TOOL */
+
+.tools-menu a.active{
 background:#ff0055;
 color:white;
 }
