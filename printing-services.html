@@ -24,6 +24,8 @@ justify-content:center;
 padding:10px;
 }
 
+/* MAIN MENU BAR */
+
 .main-menu{
 display:flex;
 justify-content:flex-end;
@@ -32,43 +34,72 @@ background:#111;
 padding:10px 20px;
 }
 
+/* MENU LINKS */
+
 .main-menu a{
-color:#fff;
 text-decoration:none;
+color:white;
 font-weight:600;
+font-size:14px;
 padding:6px 10px;
 border-radius:6px;
+transition:0.25s;
 }
 
-.main-menu a:hover,
+/* HOVER */
+
+.main-menu a:hover{
+background:#333;
+}
+
+/* ACTIVE PAGE */
+
 .main-menu a.active{
 background:#ff0055;
 }
+
+/* TOOLS MENU */
 
 .tools-menu{
 display:flex;
 overflow-x:auto;
 gap:10px;
 padding:12px;
-background:#fff;
+background:white;
 position:sticky;
 top:0;
-box-shadow:0 2px 6px rgba(0,0,0,.1);
+z-index:100;
+box-shadow:0 2px 6px rgba(0,0,0,0.1);
 }
+
+/* TOOL BUTTON */
 
 .tools-menu a{
 flex:0 0 auto;
 padding:8px 16px;
 background:#f1f2f6;
 border-radius:20px;
+font-size:14px;
 text-decoration:none;
 color:#333;
+white-space:nowrap;
 font-weight:600;
+transition:0.25s;
 }
+
+/* TOOL HOVER */
 
 .tools-menu a:hover{
 background:#ff0055;
-color:#fff;
+color:white;
+transform:translateY(-2px);
+}
+
+/* ACTIVE TOOL */
+
+.tools-menu a.active{
+background:#ff0055;
+color:white;
 }
 
 .hero{
@@ -176,25 +207,42 @@ font-size:14px;
 </div>
 
 <nav class="main-menu">
+
 <a href="index.html">Home</a>
+
 <a href="image-tools.html">Tools</a>
-<a href="printing-services.html" class="active">Printing</a>
+
+<a href="printing-services.html">Printing</a>
+
+<a href="web-development.html" class="active">Web Development</a>
+
 <a href="about.html">About</a>
+
 <a href="contact.html">Contact</a>
+
 <a href="blog.html">Blog</a>
+
 </nav>
 
 <div class="tools-menu">
 
 <a href="compress-image.html">Compress</a>
+
 <a href="resize-image.html">Resize</a>
+
 <a href="jpg-to-png.html">JPG→PNG</a>
+
 <a href="png-to-jpg.html">PNG→JPG</a>
+
 <a href="crop-image.html">Crop</a>
+
 <a href="image-to-pdf.html">Image→PDF</a>
+
 <a href="pdf-to-image.html">PDF→Image</a>
+
 <a href="remove-bg.html">Remove BG</a>
-<a href="heic-converter.html">HEIC</a>
+
+<a href="heic-converter.html">HEIC Converter</a>
 
 </div>
 
