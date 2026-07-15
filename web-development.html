@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SharpToolKit – Free Online Image Tools</title>
-<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/favicon.png?raw=true" type="image/png">
-<meta name="description" content="SharpToolKit provides free online image tools including compress, resize, crop, JPG to PNG, PNG to JPG. Modern, responsive, and mobile-friendly.">
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MK0EQ7F4CB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<title>Website Development | SharpToolKit</title>
 
-  gtag('config', 'G-MK0EQ7F4CB');
-</script>
-  
+<meta name="description" content="Professional website development services for businesses. HTML, CSS & JavaScript websites, WordPress websites, Google Analytics, SEO and domain connection.">
+
+<link rel="icon" href="https://github.com/Tp-Master/SharpToolKit/blob/main/images/Logo.png?raw=true" type="image/png">
+
 <style>
 
-header{
-background:linear-gradient(90deg,#ff0055,#ff7a95);
-color:white;
-padding:20px;
-text-align:center;
-font-size:24px;
-font-weight:bold;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-/* MAIN MENU BAR */
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:#f5f6fa;
+color:#222;
+line-height:1.6;
+}
+
+.logo{
+display:flex;
+justify-content:center;
+padding:10px;
+}
 
 .main-menu{
 display:flex;
@@ -38,31 +40,19 @@ background:#111;
 padding:10px 20px;
 }
 
-/* MENU LINKS */
-
 .main-menu a{
 text-decoration:none;
-color:white;
+color:#fff;
 font-weight:600;
-font-size:14px;
 padding:6px 10px;
 border-radius:6px;
-transition:0.25s;
+transition:.3s;
 }
 
-/* HOVER */
-
-.main-menu a:hover{
-background:#333;
-}
-
-/* ACTIVE PAGE */
-
+.main-menu a:hover,
 .main-menu a.active{
 background:#ff0055;
 }
-
-/* TOOLS MENU */
 
 .tools-menu{
 display:flex;
@@ -73,325 +63,192 @@ background:white;
 position:sticky;
 top:0;
 z-index:100;
-box-shadow:0 2px 6px rgba(0,0,0,0.1);
+box-shadow:0 2px 6px rgba(0,0,0,.1);
 }
-
-/* TOOL BUTTON */
 
 .tools-menu a{
 flex:0 0 auto;
 padding:8px 16px;
 background:#f1f2f6;
 border-radius:20px;
-font-size:14px;
 text-decoration:none;
 color:#333;
-white-space:nowrap;
 font-weight:600;
-transition:0.25s;
 }
-
-/* TOOL HOVER */
 
 .tools-menu a:hover{
 background:#ff0055;
 color:white;
-transform:translateY(-2px);
 }
-
-.logo{
-display:flex;
-justify-content:center;
-align-items:center;
-padding:10px;
-}
-
-/* GLOBAL STYLES */
-body{margin:0;font-family:'Segoe UI',Arial,Helvetica,sans-serif;color:#222;line-height:1.6;background:#f5f6fa;}
-a{text-decoration:none;color:#ff0055;transition:0.3s;} a:hover{text-decoration:underline;}
-h1,h2,h3{margin:0 0 15px 0;font-weight:700;}
-p{margin-bottom:16px;}
-button{cursor:pointer;font-weight:600;}
-
-
-/* HERO SECTION */
 
 .hero{
-  background:url("https://github.com/Tp-Master/SharpToolKit/blob/main/images/index%20hero%20image.jpg?raw=true") center/cover no-repeat;
-  color:white;
-  text-align:center;
-  padding:220px 60px;
-  position:relative;
-}
-
-/* dark overlay so text is readable */
-.hero::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.55);
-}
-
-/* keep text above overlay */
-.hero h1,
-.hero p,
-.hero button{
-  position:relative;
+background:linear-gradient(120deg,#ff0055,#ff7a95);
+padding:90px 20px;
+color:white;
+text-align:center;
 }
 
 .hero h1{
-  font-size:48px;
-  animation:fadeInUp 1s ease forwards;
-  opacity:0;
+font-size:42px;
+margin-bottom:15px;
 }
 
 .hero p{
-  font-size:20px;
-  margin-top:15px;
-  animation:fadeInUp 1.2s ease forwards;
-  opacity:0;
+max-width:750px;
+margin:auto;
+font-size:18px;
 }
 
-.hero button{
-  margin-top:30px;
-  padding:16px 30px;
-  border-radius:12px;
-  border:none;
-  font-size:18px;
-  background:#fff;
-  color:#ff0055;
-  box-shadow:0 6px 20px rgba(255,0,85,0.4);
-  transition:0.3s;
+.btn{
+display:inline-block;
+margin-top:30px;
+background:white;
+color:#ff0055;
+padding:15px 35px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
 }
 
-.hero button:hover{
-  transform:scale(1.05);
-  box-shadow:0 10px 25px rgba(255,0,85,0.5);
+.btn:hover{
+background:#f3f3f3;
 }
 
-/* ANIMATIONS */
-@keyframes gradientBG{
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
-}
-@keyframes fadeInUp{
-  to{opacity:1;transform:translateY(0);}
-  from{opacity:0;transform:translateY(30px);}
-}  
-
-/* CONTAINER */
-.container{max-width:1200px;margin:auto;padding:40px 20px;}
-
-/* TOOL CARDS GRID */
-.tool-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;}
-.tool-card{
-  background:white;padding:25px;border-radius:20px;box-shadow:0 20px 40px rgba(0,0,0,0.1);text-align:center;
-  transition:transform 0.3s,box-shadow 0.3s;
-}
-.tool-card:hover{transform:translateY(-10px) rotateX(2deg) rotateY(2deg);box-shadow:0 30px 60px rgba(0,0,0,0.15);}
-.tool-card img{width:60px;margin-bottom:15px;}
-
-/* SECTION BACKGROUNDS */
-.section-alt{background:#f1f3f6;padding:60px 20px;border-radius:20px;}
-
-/* BUTTONS */
-.btn-primary{background:#ff0055;color:white;padding:14px 28px;border:none;border-radius:12px;font-size:16px;box-shadow:0 6px 15px rgba(255,0,85,0.4);transition:0.3s;}
-.btn-primary:hover{transform:scale(1.05);box-shadow:0 10px 25px rgba(255,0,85,0.5);}
-
-/* FOOTER */
-footer{background:#111827;color:#ddd;text-align:center;padding:30px;font-size:14px;margin-top:40px;}
-
-.footer{
-background:#0f172a;
-color:#ddd;
-padding:50px 20px 20px;
-margin-top:60px;
-}
-
-.footer-container{
+.container{
 max-width:1200px;
 margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:40px;
+padding:60px 20px;
 }
 
-.footer-col h3{
-color:#fff;
-margin-bottom:10px;
-}
-
-.footer-col h4{
-color:#fff;
-margin-bottom:10px;
-}
-
-.footer-col p{
-font-size:14px;
-line-height:1.6;
-}
-
-.footer-col a{
-display:block;
-color:#bbb;
-margin:6px 0;
-text-decoration:none;
-font-size:14px;
-}
-
-.footer-col a:hover{
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:40px;
 color:#ff0055;
 }
 
-.footer-bottom{
-text-align:center;
-margin-top:40px;
-border-top:1px solid #333;
-padding-top:20px;
-font-size:14px;
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:30px;
 }
 
-.whatsapp-float{
-position:fixed;
-bottom:20px;
-right:20px;
-
-background:#25D366;
-color:white;
-
-width:60px;
-height:60px;
-
-border-radius:50%;
-
-display:flex;
-align-items:center;
-justify-content:center;
-
-font-size:28px;
-
-text-decoration:none;
-
-box-shadow:0 6px 15px rgba(0,0,0,0.3);
-
-z-index:999;
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.whatsapp-float:hover{
-transform:scale(1.1);
-}  
-
-.share-container{
-position:fixed;
-bottom:90px;
-right:20px;
-z-index:999;
+.card:hover{
+transform:translateY(-6px);
 }
 
-.share-main{
-width:60px;
-height:60px;
-border:none;
-border-radius:50%;
-
+.badge{
+display:inline-block;
+padding:8px 15px;
 background:#ff0055;
 color:white;
-
-font-size:24px;
-cursor:pointer;
-
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
+border-radius:30px;
+font-size:13px;
+margin-bottom:15px;
 }
 
-.share-menu{
-display:none;
-flex-direction:column;
-
-background:white;
-
-border-radius:12px;
-
-box-shadow:0 10px 30px rgba(0,0,0,0.25);
-
-margin-bottom:10px;
-
-overflow:hidden;
+.card h2{
+margin-bottom:15px;
+color:#ff0055;
 }
 
-.share-menu button{
+.price{
+font-size:34px;
+font-weight:bold;
+margin:20px 0;
+color:#111;
+}
 
-padding:12px 18px;
+.card ul{
+padding-left:20px;
+margin-top:20px;
+}
 
-border:none;
+.card li{
+margin:12px 0;
+}
+
+.note{
+margin-top:25px;
+padding:15px;
+background:#fff4f8;
+border-left:5px solid #ff0055;
+border-radius:8px;
+}
+
+.compare{
+margin-top:60px;
 background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+overflow-x:auto;
+}
 
-text-align:left;
+table{
+width:100%;
+border-collapse:collapse;
+}
 
-font-size:14px;
+th{
+background:#ff0055;
+color:white;
+padding:15px;
+}
 
-cursor:pointer;
-
+td{
+padding:15px;
 border-bottom:1px solid #eee;
+}
+
+tr:hover{
+background:#fafafa;
+}
+
+@media(max-width:768px){
+
+.main-menu{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero h1{
+font-size:30px;
+}
+
+.section-title{
+font-size:28px;
+}
 
 }
 
-.share-menu button:hover{
-background:#f5f5f5;
-}
-  
 </style>
+
 </head>
+
 <body>
 
-<div class="share-container">
-
-<button class="share-main" onclick="toggleShare()">🔗</button>
-
-<div class="share-menu" id="shareMenu">
-
-<button onclick="nativeShare()">📱 Share</button>
-
-<button onclick="shareWhatsApp()">WhatsApp</button>
-
-<button onclick="shareFacebook()">Facebook</button>
-
-<button onclick="shareTwitter()">Twitter</button>
-
-<button onclick="shareTelegram()">Telegram</button>
-
-<button onclick="shareInstagram()">Instagram</button>
-
-<button onclick="copyLink()">Copy Link</button>
-
-</div>
-
-</div>    
-
-<a href="https://wa.me/27821234567" class="whatsapp-float" target="_blank">
-<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" width="32">
-</a>  
-  
-<!-- HEADER -->
-
-<header></header>
-
 <div class="logo">
-<img src="https://github.com/Tp-Master/SharpToolKit/blob/main/images/cropped-image3-removebg-preview.png?raw=true" height="52">
+<img src="https://github.com/Tp-Master/SharpToolKit/blob/main/images/cropped-image3-removebg-preview.png?raw=true" height="70">
 </div>
 
 <nav class="main-menu">
 
-<a href="index.html" class="active">Home</a>
+<a href="index.html">Home</a>
 
 <a href="image-tools.html">Tools</a>
 
 <a href="printing-services.html">Printing</a>
 
-<a href="website-development.html">Web Development</a>
+<a href="website-development.html" class="active">Web Development</a>
 
 <a href="about.html">About</a>
 
@@ -402,237 +259,622 @@ background:#f5f5f5;
 </nav>
 
 <div class="tools-menu">
+
 <a href="compress-image.html">Compress</a>
+
 <a href="resize-image.html">Resize</a>
+
 <a href="jpg-to-png.html">JPG→PNG</a>
+
 <a href="png-to-jpg.html">PNG→JPG</a>
+
 <a href="crop-image.html">Crop</a>
+
 <a href="image-to-pdf.html">Image→PDF</a>
+
 <a href="pdf-to-image.html">PDF→Image</a>
-<a href="webp-converter.html">WebP Tool</a>
+
 <a href="remove-bg.html">Remove BG</a>
-<a href="heic-converter.html">HEIC Converter </a>
+
+<a href="heic-converter.html">HEIC Converter</a>
+
 </div>
 
-<!-- HERO SECTION -->
 <section class="hero">
-<h1>Free Online Image Tools</h1>
-<p>Compress, resize, crop and convert images instantly with SharpToolKit.
-Fast, secure and works on mobile and desktop.</p>
-<button onclick="window.location.href='image-tools.html'">Try Tools Now</button>
+
+<h1>Professional Website Development</h1>
+
+<p>
+
+We build fast, responsive and SEO-friendly websites for businesses, freelancers and startups. Whether you need a simple business website or a powerful WordPress website, SharpToolKit has you covered.
+
+</p>
+
+<a href="#quote" class="btn">
+
+Request A Free Quote
+
+</a>
+
 </section>
 
 <div class="container">
 
+<h2 class="section-title">
+
+Choose Your Website Package
+
+</h2>
+
+<div class="cards">
+
 <div class="card">
-<h1 style="text-align:center;margin-bottom:40px;">Welcome to SharpToolKit</h1>
-<p>SharpToolKit is the easiest way to edit and optimize images directly from your mobile phone. Whether you want to compress a large photo, resize it for social media, convert JPG to PNG, or crop it perfectly, SharpToolKit provides simple, fast, and free tools without requiring downloads or registration.</p>
-<p>Our website is designed for mobile users first, with easy-to-tap buttons and quick results. Every tool is optimized to maintain high-quality images while making them smaller or ready for your online needs.</p>
+
+<span class="badge">
+
+Best Value
+
+</span>
+
+<h2>
+
+🚀 Business Website
+
+</h2>
+
+<div class="price">
+
+Starting From R1,500
+
 </div>
 
-<!-- TOOL CARDS SECTION -->
-<section class="container">
-<h2 style="text-align:center;margin-bottom:40px;">Our Tools</h2>
-<div class="card">
-<p>We provide six essential tools for anyone who works with images on mobile:</p>
+<p>
+
+A professional website built using HTML, CSS and JavaScript. Perfect for businesses that need a modern, fast and reliable online presence.
+
+</p>
+
 <ul>
-<li><strong>Compress Image:</strong> Reduce file size without losing quality. Perfect for uploading to social media or sending via chat apps.</li>
-<li><strong>Resize Image:</strong> Change the dimensions of your photos to fit Instagram posts, profile pictures, or website requirements.</li>
-<li><strong>JPG to PNG:</strong> Convert JPG images to PNG format for higher quality or transparent backgrounds.</li>
-<li><strong>PNG to JPG:</strong> Convert PNG images to JPG to reduce file size and improve compatibility.</li>
-<li><strong>Crop Image:</strong> Cut out unwanted parts and focus on the important area in your photo.</li>
+
+<li>✔ One Page Landing Website</li>
+
+<li>✔ Built with HTML, CSS & JavaScript</li>
+
+<li>✔ Responsive Design</li>
+
+<li>✔ Contact Form</li>
+
+<li>✔ WhatsApp Button</li>
+
+<li>✔ Domain Connection</li>
+
+<li>✔ Google Analytics Setup</li>
+
+<li>✔ Google Search Console Setup</li>
+
+<li>✔ Google Search Indexing</li>
+
+<li>✔ SSL Security</li>
+
+<li>✔ Basic SEO</li>
+
+<li>✔ Fast Loading Website</li>
+
 </ul>
 
-<div class="tool-grid">
-  <div class="tool-card">
-    <img src="https://img.icons8.com/ios/100/000000/compress.png" alt="Compress">
-    <h3>Compress Images</h3>
-    <p>Reduce file size without losing quality. Perfect for websites, emails, and social media.</p>
-    <button class="btn-primary" onclick="window.location.href='compress.html'">Try Compress</button>
-  </div>
-  <div class="tool-card">
-    <img src="https://img.icons8.com/ios/100/000000/resize.png" alt="Resize">
-    <h3>Resize Images</h3>
-    <p>Adjust width and height while maintaining clarity. Ideal for profile photos and banners.</p>
-    <button class="btn-primary" onclick="window.location.href='resize.html'">Try Resize</button>
-  </div>
-  <div class="tool-card">
-    <img src="https://img.icons8.com/ios/100/000000/jpg.png" alt="JPG to PNG">
-    <h3>JPG to PNG</h3>
-    <p>Convert images to PNG for better quality or transparency. Fast and free.</p>
-    <button class="btn-primary" onclick="window.location.href='jpg-to-png.html'">Try JPG→PNG</button>
-  </div>
-  <div class="tool-card">
-    <img src="https://img.icons8.com/ios/100/000000/png.png" alt="PNG to JPG">
-    <h3>PNG to JPG</h3>
-    <p>Convert PNG files to JPG for smaller size and faster upload. Simple and quick.</p>
-    <button class="btn-primary" onclick="window.location.href='png-to-jpg.html'">Try PNG→JPG</button>
-  </div>
-  <div class="tool-card">
-    <img src="https://img.icons8.com/ios/100/000000/crop.png" alt="Crop">
-    <h3>Crop Images</h3>
-    <p>Select and crop the exact area you want. Adjustable, precise, and mobile-friendly.</p>
-    <button class="btn-primary" onclick="window.location.href='crop.html'">Try Crop</button>
-  </div>
+<div class="note">
+
+<strong>Need more pages?</strong>
+
+<p>
+
+Additional pages are available from <strong>R500 per page</strong>.
+
+</p>
+
 </div>
 
-</section>
-
-<div class="card">
-<h2 style="text-align:center;margin-bottom:40px;">Why SharpToolKit is Perfect for Mobile</h2>
-<p>Editing images on your phone can be frustrating with apps that are slow or require accounts. SharpToolKit simplifies this by providing:</p>
-<ul>
-<li>Instant online tools that work in your browser</li>
-<li>High-quality output images</li>
-<li>No downloads, installations, or login required</li>
-<li>Mobile-first design for easy navigation</li>
-</ul>
-<p>Each tool is optimized for small screens, so you can perform multiple edits without leaving the page. After compressing an image, you can quickly <a href="resize.html">resize it</a> or <a href="jpg-to-png.html">convert it to PNG</a> for your projects.</p>
 </div>
 
 <div class="card">
-<h2 style="text-align:center;margin-bottom:40px;">Tips for Using SharpToolKit Effectively</h2>
+
+<span class="badge">
+
+Content Management
+
+</span>
+
+<h2>
+
+🌍 WordPress Website
+
+</h2>
+
+<div class="price">
+
+Starting From R2,500
+
+</div>
+
+<p>
+
+Perfect for businesses that want to update their own website and expand it over time.
+
+</p>
+
 <ul>
-<li>Always keep a copy of your original image before editing.</li>
-<li>Compress images before uploading to websites to improve page speed.</li>
-<li>Resize images for social media to fit the recommended dimensions.</li>
-<li>Use JPG to PNG for logos or images that need a transparent background.</li>
-<li>Crop images to remove unwanted parts and focus on the main subject.</li>
+
+<li>✔ WordPress Installation</li>
+
+<li>✔ Homepage Setup</li>
+
+<li>✔ Mobile Friendly Design</li>
+
+<li>✔ Contact Form</li>
+
+<li>✔ Domain Connection</li>
+
+<li>✔ Google Analytics Setup</li>
+
+<li>✔ Google Search Console Setup</li>
+
+<li>✔ Google Search Indexing</li>
+
+<li>✔ Basic SEO</li>
+
+<li>✔ Security Configuration</li>
+
 </ul>
-<p>Following these tips ensures your images look professional and load quickly on websites or apps.</p>
-</div>
 
-<!-- CTA SECTION -->
-<section class="container" style="text-align:center;margin:60px 0;">
-<h2>Get Started Now</h2>
-<p>Optimize your images for web, social media, or email with SharpToolKit’s free online tools.</p>
-<button class="btn-primary" onclick="window.location.href='compress.html'">Start Compressing Images</button>
-</section>
+<div class="note">
 
-<!-- AD PLACEHOLDER -->
-<div class="container" style="text-align:center;margin-bottom:40px;">
-<script>
-/* Monetag / AdSense ad code here */
-</script>
+<strong>Need extra features?</strong>
+
+<p>
+
+The final price depends on the number of pages, online stores, booking systems, premium plugins and any custom functionality required.
+
+</p>
 
 </div>
 
 </div>
 
-<footer class="footer">
-
-<div class="footer-container">
-
-<div class="footer-col">
-<h4>Tools</h4>
-<a href="compress-image.html">Image Compressor</a>
-<a href="resize-image.html">Image Resizer</a>
-<a href="crop-image.html">Crop Image</a>
-<a href="jpg-to-png.html">JPG to PNG</a>
-<a href="png-to-jpg.html">PNG to JPG</a>
 </div>
 
-<div class="footer-col">
-<h4>Website</h4>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="contact.html">Contact</a>
+<div class="compare">
+
+<h2 style="color:#ff0055;margin-bottom:20px;">
+
+Business Website vs WordPress Website
+
+</h2>
+
+<table>
+
+<tr>
+
+<th>Feature</th>
+
+<th>Business Website</th>
+
+<th>WordPress Website</th>
+
+</tr>
+
+<tr>
+
+<td>Starting Price</td>
+
+<td>R1,500</td>
+
+<td>R2,500</td>
+
+</tr>
+
+<tr>
+
+<td>Built Using</td>
+
+<td>HTML, CSS & JavaScript</td>
+
+<td>WordPress</td>
+
+</tr>
+
+<tr>
+
+<td>Best For</td>
+
+<td>Businesses & Landing Pages</td>
+
+<td>Businesses, Blogs & Online Stores</td>
+
+</tr>
+
+<tr>
+
+<td>Easy Content Updates</td>
+
+<td>Developer Updates</td>
+
+<td>Customer Can Update</td>
+
+</tr>
+
+<tr>
+
+<td>Google Ready</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>Mobile Friendly</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+
+<tr>
+
+<td>SEO Friendly</td>
+
+<td>✔</td>
+
+<td>✔</td>
+
+</tr>
+<tr>
+
+<td>Fast Loading</td>
+
+<td>✔ Excellent</td>
+
+<td>✔ Excellent</td>
+
+</tr>
+
+<tr>
+
+<td>Online Store</td>
+
+<td>Available On Request</td>
+
+<td>WooCommerce Available</td>
+
+</tr>
+
+<tr>
+
+<td>Booking System</td>
+
+<td>Available On Request</td>
+
+<td>Available</td>
+
+</tr>
+
+<tr>
+
+<td>Maintenance</td>
+
+<td>Optional</td>
+
+<td>Recommended</td>
+
+</tr>
+
+</table>
+
 </div>
 
-<div class="footer-col">
-<h4>Legal</h4>
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms of Service</a>
+<h2 class="section-title" style="margin-top:70px;">
+
+Additional Services
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h2>📈 Google Services</h2>
+
+<table>
+
+<tr>
+
+<th>Service</th>
+
+<th>Price</th>
+
+</tr>
+
+<tr>
+
+<td>Google Analytics Setup</td>
+
+<td>From R300</td>
+
+</tr>
+
+<tr>
+
+<td>Google Search Console</td>
+
+<td>From R300</td>
+
+</tr>
+
+<tr>
+
+<td>Google Search Indexing</td>
+
+<td>From R300</td>
+
+</tr>
+
+<tr>
+
+<td>Google Business Profile Setup</td>
+
+<td>From R500</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>🌐 Website Extras</h2>
+
+<table>
+
+<tr>
+
+<th>Service</th>
+
+<th>Price</th>
+
+</tr>
+
+<tr>
+
+<td>Additional Page</td>
+
+<td>From R500</td>
+
+</tr>
+
+<tr>
+
+<td>Contact Form</td>
+
+<td>Included / From R300</td>
+
+</tr>
+
+<tr>
+
+<td>Domain Connection</td>
+
+<td>From R300</td>
+
+</tr>
+
+<tr>
+
+<td>Basic SEO</td>
+
+<td>From R500</td>
+
+</tr>
+
+<tr>
+
+<td>Website Maintenance</td>
+
+<td>From R500 / Month</td>
+
+</tr>
+
+<tr>
+
+<td>WooCommerce Store</td>
+
+<td>Quote Required</td>
+
+</tr>
+
+<tr>
+
+<td>Booking System</td>
+
+<td>Quote Required</td>
+
+</tr>
+
+<tr>
+
+<td>Premium Plugins</td>
+
+<td>Quote Required</td>
+
+</tr>
+
+</table>
+
 </div>
 
 </div>
 
-<div class="footer-bottom">
-© 2026 SharpToolKit. All rights reserved.
+<h2 class="section-title" id="quote" style="margin-top:70px;">
+
+Request A Free Quote
+
+</h2>
+
+<div class="card">
+
+<p>
+
+Tell us about your project and we'll contact you with a free quotation.
+
+</p>
+
+<form style="display:flex;flex-direction:column;gap:15px;margin-top:25px;">
+
+<input
+type="text"
+placeholder="Your Name"
+required
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<input
+type="text"
+placeholder="Business Name"
+required
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<input
+type="tel"
+placeholder="Phone Number"
+required
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<input
+type="email"
+placeholder="Email Address"
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<select
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<option>Select Website Type</option>
+
+<option>Business Website</option>
+
+<option>WordPress Website</option>
+
+<option>Not Sure</option>
+
+</select>
+
+<select
+style="padding:14px;border:1px solid #ddd;border-radius:8px;">
+
+<option>Business Category</option>
+
+<option>Mechanic</option>
+
+<option>Restaurant</option>
+
+<option>Car Wash</option>
+
+<option>Salon</option>
+
+<option>Construction</option>
+
+<option>Online Store</option>
+
+<option>Personal Website</option>
+
+<option>Other</option>
+
+</select>
+
+<textarea
+
+placeholder="Tell us about your website..."
+
+style="padding:14px;border:1px solid #ddd;border-radius:8px;height:160px;resize:vertical;">
+
+</textarea>
+
+<button
+
+style="background:#ff0055;color:white;padding:16px;border:none;border-radius:10px;font-size:17px;font-weight:bold;cursor:pointer;">
+
+Request Quote
+
+</button>
+
+</form>
+
 </div>
 
-<script>
+</div>
 
-function toggleShare(){
+<footer style="background:#111827;color:#ddd;padding:50px 20px;margin-top:60px;">
 
-let menu = document.getElementById("shareMenu");
+<div style="max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;">
 
-if(menu.style.display === "flex"){
-menu.style.display = "none";
-}else{
-menu.style.display = "flex";
-}
+<div>
 
-}
+<h3 style="color:white;">
 
-function nativeShare(){
+SharpToolKit
 
-if(navigator.share){
+</h3>
 
-navigator.share({
-title:document.title,
-url:location.href
-});
+<p>
 
-}else{
+Professional Website Development, Printing Services, Image Tools and Digital Solutions.
 
-alert("Sharing not supported on this device");
+</p>
 
-}
+</div>
 
-}
+<div>
 
-function shareWhatsApp(){
+<h3 style="color:white;">
 
-window.open(
-"https://wa.me/?text="+encodeURIComponent(document.title+" "+location.href)
-);
+Services
 
-}
+</h3>
 
-function shareFacebook(){
+<p><a href="website-development.html" style="color:#bbb;text-decoration:none;">Website Development</a></p>
 
-window.open(
-"https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href)
-);
+<p><a href="printing-services.html" style="color:#bbb;text-decoration:none;">Printing Services</a></p>
 
-}
+<p><a href="image-tools.html" style="color:#bbb;text-decoration:none;">Image Tools</a></p>
 
-function shareTwitter(){
+</div>
 
-window.open(
-"https://twitter.com/intent/tweet?url="+encodeURIComponent(location.href)
-);
+<div>
 
-}
+<h3 style="color:white;">
 
-function shareTelegram(){
+Company
 
-window.open(
-"https://t.me/share/url?url="+encodeURIComponent(location.href)
-);
+</h3>
 
-}
+<p><a href="index.html" style="color:#bbb;text-decoration:none;">Home</a></p>
 
-function shareInstagram(){
+<p><a href="about.html" style="color:#bbb;text-decoration:none;">About</a></p>
 
-navigator.clipboard.writeText(location.href);
+<p><a href="contact.html" style="color:#bbb;text-decoration:none;">Contact</a></p>
 
-alert("Link copied! Paste it on Instagram.");
+</div>
 
-window.open("https://www.instagram.com/");
+</div>
 
-}
+<div style="text-align:center;margin-top:40px;border-top:1px solid #333;padding-top:20px;">
 
-function copyLink(){
+© 2026 SharpToolKit. All Rights Reserved.
 
-navigator.clipboard.writeText(location.href);
+</div>
 
-alert("Link copied!");
-
-}
-
-</script>
+</footer>
 
 </body>
 
