@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Xbox Series X 2TB Galaxy Black Special Edition Giveaway. Enter now for your chance to win.">
+  <meta name="theme-color" content="#0e0e0e">
+
+  <title>Xbox Series X Giveaway | Power Your Dreams</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MK0EQ7F4CB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-MK0EQ7F4CB');
+
+    function trackEntry() {
+      if (typeof gtag === 'function') {
+        gtag('event', 'monetag_direct_link_click', {
+          event_category: 'giveaway',
+          event_label: 'Xbox Series X Official Style CTA'
+        });
+      }
+    }
+  </script>
+
+  <!-- Monetag Ad Script -->
+  <script src="https://quge5.com/88/tag.min.js"
+    data-zone="310244"
+    async
+    data-cfasync="false"></script>
+
+  <style>
+    :root {
+      --bg-black: #0e0e0e;
+      --bg-dark-gray: #171717;
+      --bg-card: #222222;
+      --border-subtle: #333333;
+      --xbox-green: #107C10;
+      --xbox-neon: #9BF00B;
+      --xbox-neon-hover: #a8ff1a;
+      --text-white: #ffffff;
+      --text-gray: #d2d2d2;
+      --text-muted: #9a9a9a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: var(--bg-black);
+      color: var(--text-white);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Xbox Global Header */
+    .xbox-nav {
+      background-color: #171717;
+      border-bottom: 1px solid #2a2a2a;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 1px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .xbox-sphere {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--xbox-green);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: 0 0 10px rgba(16, 124, 16, 0.6);
+    }
+
+    .xbox-sphere::before {
+      content: "X";
+      font-weight: 900;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .nav-divider {
+      width: 1px;
+      height: 22px;
+      background: #444;
+    }
+
+    .nav-tag {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-gray);
+    }
+
+    .nav-status {
+      background: rgba(155, 240, 11, 0.14);
+      border: 1px solid var(--xbox-neon);
+      color: var(--xbox-neon);
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 4px 10px;
+    }
+
+    /* Xbox Split Hero Banner */
+    .hero-banner {
+      position: relative;
+      background: radial-gradient(circle at 75% 50%, #163b16 0%, #0e0e0e 65%);
+      border-bottom: 1px solid #262626;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 56px 24px 64px;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .xbox-badge {
+      display: inline-block;
+      background-color: var(--xbox-neon);
+      color: #051805;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 4px 10px;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    .hero-copy h1 span {
+      color: var(--xbox-neon);
+    }
+
+    .hero-copy p {
+      font-size: 17px;
+      color: var(--text-gray);
+      max-width: 520px;
+      margin-bottom: 28px;
+      line-height: 1.55;
+    }
+
+    /* Signature Xbox Primary CTA Button */
+    .btn-xbox {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background-color: var(--xbox-neon);
+      color: #051805;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      text-decoration: none;
+      padding: 15px 28px;
+      border: 2px solid var(--xbox-neon);
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+    }
+
+    .btn-xbox:hover {
+      background-color: var(--xbox-neon-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(155, 240, 11, 0.35);
+    }
+
+    .btn-xbox .chevron {
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 0.15s ease;
+    }
+
+    .btn-xbox:hover .chevron {
+      transform: translateX(4px);
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      background: radial-gradient(circle, rgba(16, 124, 16, 0.65) 0%, transparent 70%);
+      filter: blur(40px);
+      z-index: 0;
+    }
+
+    .hero-visual img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 540px;
+      height: auto;
+      display: block;
+      -webkit-mask-image: radial-gradient(ellipse 92% 90% at 50% 50%, #000 74%, transparent 100%);
+      mask-image: radial-gradient(ellipse 92% 90% at 50% 50%, #000 74%, transparent 100%);
+      filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.8));
+    }
+
+    /* Xbox Quick Icon Strip */
+    .quick-strip {
+      background-color: #141414;
+      border-bottom: 1px solid #262626;
+    }
+
+    .strip-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      text-align: center;
+    }
+
+    .strip-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .strip-val {
+      color: var(--xbox-neon);
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+    }
+
+    .strip-label {
+      color: var(--text-gray);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Main Content Container */
+    .main-section {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    /* Xbox Asymmetric Bento Grid (Form + Bundle Details) */
+    .bento-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    /* Left Column: Xbox Hardware Tile */
+    .bundle-panel {
+      background-color: var(--bg-dark-gray);
+      border: 1px solid var(--border-subtle);
+      padding: 36px 32px;
+      position: relative;
+    }
+
+    .bundle-panel::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--xbox-green);
+    }
+
+    .section-kicker {
+      color: var(--xbox-neon);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .bundle-panel h2 {
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      line-height: 1.15;
+    }
+
+    .bundle-panel > p {
+      color: var(--text-gray);
+      font-size: 15px;
+      margin-bottom: 26px;
+    }
+
+    .spec-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .spec-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #292929;
+    }
+
+    .spec-list li:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .spec-check {
+      width: 22px;
+      height: 22px;
+      background: rgba(155, 240, 11, 0.15);
+      color: var(--xbox-neon);
+      font-weight: 900;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .spec-text strong {
+      display: block;
+      font-size: 15px;
+      color: #fff;
+      margin-bottom: 2px;
+    }
+
+    .spec-text span {
+      font-size: 13.5px;
+      color: var(--text-muted);
+    }
+
+    /* Right Column: Entry Form Card */
+    .entry-panel {
+      background-color: var(--bg-dark-gray);
+      border: 1px solid #383838;
+      border-top: 4px solid var(--xbox-neon);
+      padding: 36px 32px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .entry-panel h2 {
+      font-size: 26px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .entry-panel > p {
+      color: var(--text-muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .field-group {
+      margin-bottom: 18px;
+    }
+
+    .field-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text-gray);
+      margin-bottom: 8px;
+    }
+
+    .field-group input {
+      width: 100%;
+      background-color: #0b0b0b;
+      border: 1px solid #404040;
+      color: #ffffff;
+      padding: 14px 16px;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border-color 0.15s ease;
+    }
+
+    .field-group input:focus {
+      border-color: var(--xbox-neon);
+      background-color: #111111;
+    }
+
+    .consent-box {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin: 20px 0 24px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+
+    .consent-box input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      accent-color: var(--xbox-green);
+      flex-shrink: 0;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background-color: var(--xbox-neon);
+      color: #051805;
+      border: none;
+      padding: 17px 24px;
+      font-size: 15px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-submit:hover {
+      background-color: var(--xbox-neon-hover);
+      transform: translateY(-1px);
+    }
+
+    .form-footnote {
+      margin-top: 14px;
+      font-size: 11.5px;
+      color: #808080;
+      text-align: center;
+    }
+
+    /* Xbox 3-Tile Feature Row */
+    .xbox-tiles {
+      margin-top: 64px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .tile {
+      background-color: var(--bg-dark-gray);
+      border: 1px solid #2b2b2b;
+      padding: 32px 26px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .tile:hover {
+      border-color: var(--xbox-neon);
+      transform: translateY(-3px);
+    }
+
+    .tile-step {
+      display: inline-block;
+      color: var(--xbox-neon);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .tile h3 {
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .tile p {
+      color: var(--text-muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Xbox Dark Footer */
+    .xbox-footer {
+      background-color: #141414;
+      border-top: 1px solid #262626;
+      padding: 36px 24px;
+      color: #8a8a8a;
+      font-size: 12px;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+
+    /* Responsive Breakpoints */
+    @media (max-width: 920px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 40px 20px 48px;
+      }
+
+      .hero-copy p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bento-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .xbox-tiles {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .strip-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .bundle-panel,
+      .entry-panel {
+        padding: 26px 20px;
+      }
+
+      .nav-tag,
+      .nav-divider {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="xbox-nav">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#entry" class="brand-logo">
+          <span class="xbox-sphere"></span>
+          <span>SMARTDISCOVER</span>
+        </a>
+        <div class="nav-divider"></div>
+        <span class="nav-tag">Console Giveaway Event</span>
+      </div>
+      <div class="nav-status">Entry Open</div>
+    </div>
+  </header>
+
+  <!-- Split Xbox Hero Section -->
+  <section class="hero-banner">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="xbox-badge">Power Your Dreams</span>
+        <h1>Win the <span>Xbox Series X</span> 2TB Bundle</h1>
+        <p>
+          Experience the fastest, most powerful Xbox ever. Enter your details below and continue to our promotion partner for your chance to win a 2TB Galaxy Black Special Edition console.
+        </p>
+        <a href="#entry" class="btn-xbox">
+          <span>Enter Giveaway</span>
+          <span class="chevron">&gt;</span>
+        </a>
+      </div>
+
+      <div class="hero-visual">
+        <img
+          src="https://assets.xboxservices.com/assets/fb/d2/fbd2cb56-5c25-414d-9f46-e6a164cdf5be.png?n=XBX_A-BuyBoxBGImage01-D.png"
+          alt="Xbox Series X Console and Wireless Controller"
+          loading="eager"
+          onerror="this.parentElement.style.display='none'"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- Spec Highlights Strip -->
+  <section class="quick-strip">
+    <div class="strip-grid">
+      <div class="strip-item">
+        <span class="strip-val">TRUE 4K</span>
+        <span class="strip-label">Gaming Resolution</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-val">120 FPS</span>
+        <span class="strip-label">High Frame Rate</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-val">2TB SSD</span>
+        <span class="strip-label">Custom NVMe Storage</span>
+      </div>
+      <div class="strip-item">
+        <span class="strip-val">12 TFLOPS</span>
+        <span class="strip-label">Processing Power</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Bento Section: Prize Breakdown + Entry Form -->
+  <main class="main-section" id="entry">
+    <div class="bento-layout">
+
+      <!-- Left: What's In The Box -->
+      <div class="bundle-panel">
+        <span class="section-kicker">Prize Package</span>
+        <h2>What's Included In The Bundle</h2>
+        <p>Everything you need to jump straight into next-gen console gaming right out of the box.</p>
+
+        <ul class="spec-list">
+          <li>
+            <span class="spec-check">✓</span>
+            <div class="spec-text">
+              <strong>Xbox Series X 2TB Console</strong>
+              <span>Galaxy Black Special Edition with 4K UHD Blu-ray disc drive and 2TB custom SSD.</span>
+            </div>
+          </li>
+          <li>
+            <span class="spec-check">✓</span>
+            <div class="spec-text">
+              <strong>Xbox Wireless Controller</strong>
+              <span>Textured triggers and bumpers, hybrid D-pad, and dedicated Share button.</span>
+            </div>
+          </li>
+          <li>
+            <span class="spec-check">✓</span>
+            <div class="spec-text">
+              <strong>Ultra High-Speed HDMI Cable</strong>
+              <span>Supports 4K at 120Hz, Variable Refresh Rate (VRR), and Auto Low Latency Mode.</span>
+            </div>
+          </li>
+          <li>
+            <span class="spec-check">✓</span>
+            <div class="spec-text">
+              <strong>Quick Resume &amp; Smart Delivery</strong>
+              <span>Switch between multiple titles instantly and always play the best version of your games.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: Official-Style Entry Card -->
+      <div class="entry-panel">
+        <span class="section-kicker">Step 1 of 2</span>
+        <h2>Claim Your Entry</h2>
+        <p>Complete the fields below. Your information is not stored here; clicking continue takes you to our external promotion partner.</p>
+
+        <form id="entryForm">
+          <div class="field-group">
+            <label for="email">Email Address</label>
+            <input id="email" name="email" type="email" placeholder="gamer@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field-group">
+            <label for="phone">Mobile Number</label>
+            <input id="phone" name="phone" type="tel" placeholder="e.g. 071 234 5678" autocomplete="tel" required>
+          </div>
+
+          <div class="field-group">
+            <label for="town">Town / City</label>
+            <input id="town" name="town" type="text" placeholder="Enter your town or city" autocomplete="address-level2" required>
+          </div>
+
+          <label class="consent-box" for="consent">
+            <input id="consent" type="checkbox" required>
+            <span>I understand this page does not store or submit my details, and I will review the partner's official rules and privacy policy on the next page.</span>
+          </label>
+
+          <button type="submit" class="btn-submit">
+            <span>Continue to Partner</span>
+            <span>&gt;</span>
+          </button>
+        </form>
+
+        <p class="form-footnote">Opens external partner promotion page. Check eligibility rules before submitting personal info.</p>
+      </div>
+
+    </div>
+
+    <!-- Xbox 3-Step Bento Tiles -->
+    <section class="xbox-tiles">
+      <div class="tile">
+        <span class="tile-step">Step 01</span>
+        <h3>Enter Contact Info</h3>
+        <p>Fill out your email, mobile number, and city in the form above and accept the entry notice.</p>
+      </div>
+
+      <div class="tile">
+        <span class="tile-step">Step 02</span>
+        <h3>Complete Partner Step</h3>
+        <p>Follow the instructions on the promotion partner page to confirm your giveaway registration.</p>
+      </div>
+
+      <div class="tile">
+        <span class="tile-step">Step 03</span>
+        <h3>Winner Selection</h3>
+        <p>Watch your inbox and SMS messages for draw updates and winner notification alerts.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="xbox-footer">
+    <div class="footer-inner">
+      <p>
+        This is an independently operated promotional landing page and is not affiliated with, endorsed by, or sponsored by Microsoft Corporation.
+        "Xbox", "Xbox Series X", and "Power Your Dreams" are trademarks of Microsoft Corporation. External links lead to third-party promotional offers.
+      </p>
+      <p>© 2026 SmartDiscover. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const destination = "https://uplcm.com/4/9261402";
+    document.getElementById("entryForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      if (!document.getElementById("consent").checked) return;
+      trackEntry();
+      window.location.href = destination;
+    });
+  </script>
+
+</body>
+</html>
